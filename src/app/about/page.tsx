@@ -22,14 +22,14 @@ export default function AboutPage() {
 
   return (
     <>
-      <section className="pt-40 pb-24 bg-dark">
+      <section className="pt-40 pb-24 bg-[#F5F5F7]">
         <div className="max-w-[1440px] mx-auto px-8 lg:px-16">
           <p className="text-accent text-xs font-medium tracking-[0.25em] uppercase mb-6">About</p>
-          <h1 className="text-4xl md:text-6xl font-bold text-white tracking-tight leading-none">十五年专注实验室工程</h1>
+          <h1 className="text-4xl md:text-6xl font-bold text-[#1D1D1F] tracking-tight leading-none">十五年专注实验室工程</h1>
         </div>
       </section>
 
-      <section className="py-32 md:py-40 bg-[#050505]">
+      <section className="py-32 md:py-40 bg-white">
         <div className="max-w-3xl mx-auto px-8 lg:px-16">
           <div className="text-lg text-text-secondary font-light leading-relaxed space-y-6">
             <p>北京瑞辉筑业实验室科技有限公司成立于2010年，是一家专业从事实验室整体解决方案的EPC服务商。业务涵盖实验室工艺设计、暖通洁净系统、供气管路系统、废水环保处理、智能化控制系统等全领域。</p>
@@ -38,13 +38,13 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-32 md:py-40 bg-[#080808]">
+      <section className="py-32 md:py-40 bg-[#F5F5F7]">
         <div className="max-w-[1440px] mx-auto px-8 lg:px-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-20">核心价值观</h2>
+          <h2 className="text-3xl md:text-5xl font-bold text-[#1D1D1F] tracking-tight mb-20">核心价值观</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             {values.map((v) => (
-              <div key={v.title}>
-                <h3 className="text-lg font-bold text-white mb-4">{v.title}</h3>
+              <div key={v.title} className="bg-white p-10">
+                <h3 className="text-lg font-bold text-[#1D1D1F] mb-4">{v.title}</h3>
                 <p className="text-sm text-text-secondary font-light leading-relaxed">{v.desc}</p>
               </div>
             ))}
@@ -52,9 +52,9 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-32 md:py-40 bg-[#050505]">
+      <section className="py-32 md:py-40 bg-white">
         <div className="max-w-3xl mx-auto px-8 lg:px-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-20">发展历程</h2>
+          <h2 className="text-3xl md:text-5xl font-bold text-[#1D1D1F] tracking-tight mb-20">发展历程</h2>
           <div className="space-y-12">
             {timeline.map((item) => (
               <div key={item.year} className="flex items-start gap-8">
@@ -66,16 +66,16 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="py-32 md:py-40 bg-[#080808]">
+      <section className="py-32 md:py-40 bg-[#F5F5F7]">
         <div className="max-w-[1440px] mx-auto px-8 lg:px-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-20">核心团队</h2>
+          <h2 className="text-3xl md:text-5xl font-bold text-[#1D1D1F] tracking-tight mb-20">核心团队</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
             {team.map((member) => (
-              <div key={member.id}>
-                <div className="w-16 h-16 bg-dark flex items-center justify-center mb-8">
-                  <span className="text-xl font-bold text-white">{member.name[0]}</span>
+              <div key={member.id} className="bg-white p-10">
+                <div className="w-16 h-16 bg-[#F5F5F7] flex items-center justify-center mb-8">
+                  <span className="text-xl font-bold text-[#1D1D1F]">{member.name[0]}</span>
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">{member.name}</h3>
+                <h3 className="text-lg font-bold text-[#1D1D1F] mb-2">{member.name}</h3>
                 <p className="text-sm text-accent font-medium mb-4">{member.title}</p>
                 <p className="text-sm text-text-secondary font-light leading-relaxed">{member.bio}</p>
               </div>

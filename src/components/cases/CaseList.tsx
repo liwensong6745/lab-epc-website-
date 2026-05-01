@@ -17,10 +17,10 @@ export default function CaseList({ cases }: { cases: CaseStudy[] }) {
           <button
             key={industry}
             onClick={() => setActiveFilter(industry)}
-            className={`px-6 py-3 text-sm font-medium tracking-wider transition-all duration-300 cursor-pointer ${
+            className={`px-6 py-3 text-sm font-medium tracking-wider rounded-md transition-all duration-300 cursor-pointer ${
               activeFilter === industry
-                ? "bg-dark text-white"
-                : "bg-subtle text-text-secondary hover:bg-dark hover:text-white"
+                ? "bg-[#1D1D1F] text-white btn-shadow"
+                : "bg-[#F5F5F7] text-text-secondary hover:bg-[#1D1D1F] hover:text-white"
             }`}
           >
             {industry}
@@ -31,17 +31,17 @@ export default function CaseList({ cases }: { cases: CaseStudy[] }) {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
         {filtered.map((c) => (
           <Link key={c.slug} href={`/cases/${c.slug}`} className="group block">
-            <div className="relative aspect-[4/3] bg-subtle overflow-hidden mb-8 shadow-[0_4px_24px_rgba(0,0,0,0.04)]">
+            <div className="relative aspect-[4/3] bg-[#F5F5F7] overflow-hidden mb-8 float-shadow img-fade-bottom">
               <img
                 src={c.thumbnail}
                 alt={c.title}
                 className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-1000"
               />
               <div className="absolute top-4 left-4">
-                <span className="px-3 py-1.5 bg-white/90 text-white text-xs font-medium tracking-wider uppercase">{c.industry}</span>
+                <span className="px-3 py-1.5 bg-white/90 backdrop-blur-sm text-black/45 text-xs font-medium tracking-wider uppercase">{c.industry}</span>
               </div>
             </div>
-            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-accent transition-colors tracking-tight">{c.title}</h3>
+            <h3 className="text-xl font-bold text-[#1D1D1F] mb-3 group-hover:text-accent transition-colors tracking-tight">{c.title}</h3>
             <p className="text-sm text-text-tertiary font-light">{c.client} · {c.location} · {c.duration}</p>
           </Link>
         ))}

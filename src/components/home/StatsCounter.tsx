@@ -39,15 +39,15 @@ export default function StatsCounter() {
   }, []);
 
   return (
-    <section ref={ref} className="py-24 md:py-32 bg-dark">
+    <section ref={ref} className="py-24 md:py-32 bg-white">
       <div className="max-w-[1440px] mx-auto px-8 lg:px-16">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-16 md:gap-24">
           {stats.map((stat) => (
             <div key={stat.label}>
-              <div className="text-5xl md:text-6xl font-bold text-white mb-4 tracking-tight">
+              <div className="text-5xl md:text-6xl font-bold text-[#1D1D1F] mb-4 tracking-tight">
                 <AnimatedNumber target={stat.value} suffix={stat.suffix} started={inView} />
               </div>
-              <div className="text-sm text-white/40 font-light tracking-wider">
+              <div className="text-sm text-text-tertiary font-light tracking-wider">
                 {stat.label}
               </div>
             </div>

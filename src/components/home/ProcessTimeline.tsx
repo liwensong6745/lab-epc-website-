@@ -10,7 +10,7 @@ const steps = [
 
 export default function ProcessTimeline() {
   return (
-    <section className="py-32 md:py-40 bg-[#050505]">
+    <section className="py-32 md:py-40 bg-white">
       <div className="max-w-[1440px] mx-auto px-8 lg:px-16">
         <SectionHeading
           overline="Process"
@@ -21,9 +21,9 @@ export default function ProcessTimeline() {
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-16">
           {steps.map((item) => (
             <div key={item.step}>
-              <span className="text-7xl font-black text-white/5 leading-none">{item.step}</span>
-              <h3 className="text-lg font-bold text-white mt-8 mb-4">{item.title}</h3>
-              <p className="text-sm text-white/40 font-light leading-relaxed">{item.desc}</p>
+              <span className="text-7xl font-black text-black/2 leading-none">{item.step}</span>
+              <h3 className="text-lg font-bold text-[#1D1D1F] mt-8 mb-4">{item.title}</h3>
+              <p className="text-sm text-text-secondary font-light leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>
