@@ -39,6 +39,7 @@ export default function ValueProposition() {
           </a>
         </div>
       </div>
+
     </section>
   );
 }

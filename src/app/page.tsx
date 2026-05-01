@@ -1,14 +1,18 @@
 import HeroSection from "@/components/home/HeroSection";
-import ValueProposition from "@/components/home/ValueProposition";
-import FeaturedCases from "@/components/home/FeaturedCases";
+import MagazineSpread from "@/components/home/MagazineSpread";
+import TrustBar from "@/components/home/TrustBar";
+import ActionCards from "@/components/home/ActionCards";
+import ImageGallery from "@/components/home/ImageGallery";
 import CTASection from "@/components/home/CTASection";
 
 export default function HomePage() {
   return (
     <>
       <HeroSection />
-      <ValueProposition />
-      <FeaturedCases />
+      <MagazineSpread />
+      <TrustBar />
+      <ActionCards />
+      <ImageGallery />
       <CTASection />
     </>
   );
