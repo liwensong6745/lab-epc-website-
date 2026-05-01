@@ -7,7 +7,7 @@ export default function HeroSection() {
       <div className="absolute inset-0">
         <img
           src="/images/showcase/01.png"
-          alt=""
+          alt="现代化实验室内部环境展示 — 瑞辉筑业实验室工程"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-dark/85 via-dark/55 to-dark/30" />
