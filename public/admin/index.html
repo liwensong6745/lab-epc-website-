@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>内容管理 - 瑞辉筑业</title>
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+</head>
+<body>
+  <script>
+    // Override default config to handle list structure differences
+    CMS.registerEventListener({
+      name: 'preSave',
+      handler: ({ entry }) => {
+        const collection = entry.get('collection');
+        const data = entry.get('data').toJS();
+
+        // Flatten list-of-objects for settings files
+        if (collection === 'settings' && data.members) {
+          data.members = data.members.map((m) => m);
+        }
+        if (collection === 'settings' && data.qualifications) {
+          data.qualifications = data.qualifications.map((q) => q);
+        }
+        return entry.get('data');
+      },
+    });
+  </script>
+</body>
+</html>

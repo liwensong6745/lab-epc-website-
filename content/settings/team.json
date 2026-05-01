@@ -1,0 +1,26 @@
+[
+  {
+    "id": "member-1",
+    "name": "张建国",
+    "title": "创始人 / 总经理",
+    "bio": "30年实验室工程经验，曾主导中科院、北京大学等50余个大型实验室项目",
+    "photo": "/images/team/zhang.jpg",
+    "order": 1
+  },
+  {
+    "id": "member-2",
+    "name": "李明辉",
+    "title": "技术总监",
+    "bio": "注册建造师，暖通空调专家，专注洁净室与实验室环境控制",
+    "photo": "/images/team/li.jpg",
+    "order": 2
+  },
+  {
+    "id": "member-3",
+    "name": "王晓芳",
+    "title": "设计总监",
+    "bio": "注册建筑师，LEED AP，擅长实验室功能布局与工艺流程设计",
+    "photo": "/images/team/wang.jpg",
+    "order": 3
+  }
+]

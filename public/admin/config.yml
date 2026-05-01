@@ -1,0 +1,112 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "settings"
+    label: "网站设置"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "site"
+        label: "基本信息"
+        file: "content/settings/site.json"
+        fields:
+          - { label: "公司名称", name: "companyName", widget: "string" }
+          - { label: "英文名称", name: "companyNameEn", widget: "string" }
+          - { label: "Logo路径", name: "logo", widget: "string" }
+          - { label: "电话", name: "phone", widget: "string" }
+          - { label: "邮箱", name: "email", widget: "string" }
+          - { label: "地址", name: "address", widget: "string" }
+          - { label: "微信二维码", name: "wechatQr", widget: "string" }
+          - { label: "ICP备案号", name: "icpLicense", widget: "string" }
+          - { label: "网站描述", name: "description", widget: "text" }
+      - name: "team"
+        label: "团队成员"
+        file: "content/settings/team.json"
+        fields:
+          - name: "members"
+            label: "成员列表"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "姓名", name: "name", widget: "string" }
+              - { label: "职位", name: "title", widget: "string" }
+              - { label: "简介", name: "bio", widget: "text" }
+              - { label: "照片", name: "photo", widget: "string" }
+              - { label: "排序", name: "order", widget: "number", valueType: "int" }
+      - name: "qualifications"
+        label: "资质证书"
+        file: "content/settings/qualifications.json"
+        fields:
+          - name: "qualifications"
+            label: "证书列表"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "名称", name: "name", widget: "string" }
+              - { label: "类别", name: "category", widget: "string" }
+              - { label: "图片", name: "image", widget: "string" }
+              - { label: "颁发机构", name: "issuer", widget: "string" }
+              - { label: "获得日期", name: "date", widget: "string" }
+
+  - name: "services"
+    label: "服务项目"
+    folder: "content/services"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "标题", name: "title", widget: "string" }
+      - { label: "别名(Slug)", name: "slug", widget: "string" }
+      - { label: "图标(emoji)", name: "icon", widget: "string" }
+      - { label: "简短描述", name: "shortDescription", widget: "text" }
+      - { label: "图片", name: "image", widget: "string" }
+      - { label: "排序", name: "order", widget: "number", valueType: "int" }
+      - name: "features"
+        label: "特色列表"
+        widget: "list"
+        fields:
+          - { label: "特色", name: "feature", widget: "string" }
+      - { label: "详细内容", name: "body", widget: "markdown" }
+
+  - name: "cases"
+    label: "案例展示"
+    folder: "content/cases"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "项目名称", name: "title", widget: "string" }
+      - { label: "别名(Slug)", name: "slug", widget: "string" }
+      - { label: "类别(新建/改造)", name: "category", widget: "select", options: ["新建", "改造"] }
+      - { label: "行业", name: "industry", widget: "string" }
+      - { label: "客户", name: "client", widget: "string" }
+      - { label: "地点", name: "location", widget: "string" }
+      - { label: "面积", name: "area", widget: "string" }
+      - { label: "工期", name: "duration", widget: "string" }
+      - { label: "缩略图", name: "thumbnail", widget: "string" }
+      - name: "images"
+        label: "项目图片"
+        widget: "list"
+        fields:
+          - { label: "图片", name: "image", widget: "string" }
+      - { label: "项目难点", name: "challenge", widget: "markdown" }
+      - { label: "解决方案", name: "solution", widget: "markdown" }
+      - name: "results"
+        label: "项目成果"
+        widget: "list"
+        fields:
+          - { label: "成果", name: "result", widget: "string" }
+      - name: "testimonial"
+        label: "客户评价"
+        widget: "object"
+        required: false
+        fields:
+          - { label: "评价内容", name: "quote", widget: "text" }
+          - { label: "评价人", name: "author", widget: "string" }
+          - { label: "评价人职位", name: "title", widget: "string" }
+      - { label: "精选展示", name: "featured", widget: "boolean", default: false }
+      - { label: "排序", name: "order", widget: "number", valueType: "int" }

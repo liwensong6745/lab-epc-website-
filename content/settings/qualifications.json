@@ -1,0 +1,50 @@
+[
+  {
+    "id": "cert-1",
+    "name": "CNAS认可证书",
+    "category": "资质认证",
+    "image": "/images/qualifications/cnas.png",
+    "issuer": "中国合格评定国家认可委员会",
+    "date": "2023"
+  },
+  {
+    "id": "cert-2",
+    "name": "CMA计量认证",
+    "category": "资质认证",
+    "image": "/images/qualifications/cma.png",
+    "issuer": "国家认证认可监督管理委员会",
+    "date": "2023"
+  },
+  {
+    "id": "cert-3",
+    "name": "ISO 9001质量管理体系",
+    "category": "体系认证",
+    "image": "/images/qualifications/iso9001.png",
+    "issuer": "SGS",
+    "date": "2022"
+  },
+  {
+    "id": "cert-4",
+    "name": "ISO 14001环境管理体系",
+    "category": "体系认证",
+    "image": "/images/qualifications/iso14001.png",
+    "issuer": "SGS",
+    "date": "2022"
+  },
+  {
+    "id": "cert-5",
+    "name": "建筑装修装饰工程专业承包壹级",
+    "category": "施工资质",
+    "image": "/images/qualifications/decorate.png",
+    "issuer": "中华人民共和国住房和城乡建设部",
+    "date": "2023"
+  },
+  {
+    "id": "cert-6",
+    "name": "建筑机电安装工程专业承包壹级",
+    "category": "施工资质",
+    "image": "/images/qualifications/mechanical.png",
+    "issuer": "中华人民共和国住房和城乡建设部",
+    "date": "2023"
+  }
+]
