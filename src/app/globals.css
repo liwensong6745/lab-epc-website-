@@ -1,16 +1,18 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-bg: #fafafa;
-  --color-surface: #ffffff;
-  --color-subtle: #f5f5f5;
-  --color-border: #ebebeb;
-  --color-text-primary: #171717;
-  --color-text-secondary: #737373;
-  --color-text-tertiary: #a3a3a3;
+  --color-bg: #050505;
+  --color-surface: #0a0a0a;
+  --color-subtle: #0f0f0f;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-text-primary: #f5f5f5;
+  --color-text-secondary: #999999;
+  --color-text-tertiary: #666666;
   --color-accent: #d4481c;
-  --color-accent-hover: #b83a15;
-  --color-dark: #0a0a0a;
+  --color-accent-hover: #e85d2e;
+  --color-neon: #0066ff;
+  --color-neon-glow: rgba(0, 102, 255, 0.35);
+  --color-dark: #050505;
   --font-sans: "Inter", "Noto Sans SC", ui-sans-serif, system-ui, sans-serif;
 }
 
@@ -22,8 +24,23 @@ body {
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #fafafa;
-  color: #171717;
+  background: #050505;
+  color: #f5f5f5;
   font-weight: 300;
   letter-spacing: -0.01em;
+}
+
+/* Thin industrial dividers */
+.divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Neon glow utility */
+.neon-glow {
+  box-shadow: 0 0 30px rgba(0, 102, 255, 0.25), 0 0 60px rgba(0, 102, 255, 0.1);
+}
+
+.neon-glow:hover {
+  box-shadow: 0 0 40px rgba(0, 102, 255, 0.4), 0 0 80px rgba(0, 102, 255, 0.2);
 }

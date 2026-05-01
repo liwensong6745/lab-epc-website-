@@ -16,7 +16,7 @@ export default function SectionHeading({
           {overline}
         </p>
       )}
-      <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-dark tracking-tight leading-none">
+      <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-none">
         {title}
       </h2>
       {description && (

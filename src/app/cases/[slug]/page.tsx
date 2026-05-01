@@ -31,7 +31,7 @@ export default async function CaseDetailPage({ params }: { params: Promise<{ slu
         </div>
       </section>
 
-      <section className="py-32 md:py-40 bg-white">
+      <section className="py-32 md:py-40 bg-[#050505]">
         <div className="max-w-[1440px] mx-auto px-8 lg:px-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-32">
             {c.images.map((img, i) => (
@@ -44,19 +44,19 @@ export default async function CaseDetailPage({ params }: { params: Promise<{ slu
           <div className="max-w-3xl space-y-32">
             <div>
               <p className="text-accent text-xs font-medium tracking-[0.25em] uppercase mb-8">Challenge</p>
-              <h2 className="text-2xl font-bold text-dark mb-8 tracking-tight">项目难点</h2>
+              <h2 className="text-2xl font-bold text-white mb-8 tracking-tight">项目难点</h2>
               <div className="text-text-secondary font-light leading-relaxed" dangerouslySetInnerHTML={{ __html: c.challengeHtml || "" }} />
             </div>
 
             <div>
               <p className="text-accent text-xs font-medium tracking-[0.25em] uppercase mb-8">Solution</p>
-              <h2 className="text-2xl font-bold text-dark mb-8 tracking-tight">解决方案</h2>
+              <h2 className="text-2xl font-bold text-white mb-8 tracking-tight">解决方案</h2>
               <div className="text-text-secondary font-light leading-relaxed" dangerouslySetInnerHTML={{ __html: c.solutionHtml || "" }} />
             </div>
 
             <div>
               <p className="text-accent text-xs font-medium tracking-[0.25em] uppercase mb-8">Results</p>
-              <h2 className="text-2xl font-bold text-dark mb-8 tracking-tight">项目成果</h2>
+              <h2 className="text-2xl font-bold text-white mb-8 tracking-tight">项目成果</h2>
               <ul className="space-y-4">
                 {c.results.map((r) => (
                   <li key={r} className="flex items-start gap-4 text-text-secondary font-light">
@@ -68,13 +68,13 @@ export default async function CaseDetailPage({ params }: { params: Promise<{ slu
 
             {c.testimonial && (
               <div className="bg-subtle p-12">
-                <blockquote className="text-xl text-dark font-light italic mb-8 leading-relaxed">
+                <blockquote className="text-xl text-white font-light italic mb-8 leading-relaxed">
                   &ldquo;{c.testimonial.quote}&rdquo;
                 </blockquote>
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 bg-dark flex items-center justify-center text-white font-bold text-sm">{c.testimonial.author[0]}</div>
                   <div>
-                    <div className="font-medium text-dark text-sm">{c.testimonial.author}</div>
+                    <div className="font-medium text-white text-sm">{c.testimonial.author}</div>
                     <div className="text-sm text-text-tertiary font-light">{c.testimonial.title}</div>
                   </div>
                 </div>
@@ -83,7 +83,7 @@ export default async function CaseDetailPage({ params }: { params: Promise<{ slu
           </div>
 
           <div className="mt-32 pt-12 border-t border-border">
-            <Link href="/cases" className="inline-flex items-center gap-3 text-dark font-medium text-sm tracking-wider hover:text-accent transition-colors group">
+            <Link href="/cases" className="inline-flex items-center gap-3 text-white font-medium text-sm tracking-wider hover:text-accent transition-colors group">
               <span className="group-hover:-translate-x-2 transition-transform duration-300">←</span> 返回案例列表
             </Link>
           </div>

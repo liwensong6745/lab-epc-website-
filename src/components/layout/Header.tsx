@@ -28,7 +28,7 @@ export default function Header() {
       <header
         className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-white/80 backdrop-blur-xl shadow-[0_1px_0_rgba(0,0,0,0.04)]"
+            ? "bg-[#050505]/90 backdrop-blur-xl shadow-[0_1px_0_rgba(255,255,255,0.06)]"
             : "bg-transparent"
         }`}
       >
@@ -36,7 +36,7 @@ export default function Header() {
           <div className="flex items-center justify-between h-20">
             <Link href="/" className="flex items-center gap-3 shrink-0">
               <span className={`text-xl font-bold tracking-tight transition-colors ${
-                scrolled ? "text-dark" : "text-white"
+                scrolled ? "text-white" : "text-white"
               }`}>
                 RayHo
               </span>
@@ -49,7 +49,7 @@ export default function Header() {
                   href={item.href}
                   className={`text-sm font-medium transition-colors ${
                     scrolled
-                      ? "text-text-secondary hover:text-dark"
+                      ? "text-white/50 hover:text-white"
                       : "text-white/70 hover:text-white"
                   }`}
                 >
@@ -61,9 +61,7 @@ export default function Header() {
             <div className="hidden lg:flex items-center gap-6">
               <a
                 href="tel:400-888-6666"
-                className={`text-sm font-medium transition-colors ${
-                  scrolled ? "text-text-secondary" : "text-white/60"
-                }`}
+                className="text-sm font-medium text-white/50 transition-colors"
               >
                 400-888-6666
               </a>
@@ -71,7 +69,7 @@ export default function Header() {
                 href="/contact"
                 className={`px-6 py-2.5 text-sm font-medium transition-all duration-300 ${
                   scrolled
-                    ? "bg-dark text-white hover:bg-accent"
+                    ? "bg-white/10 text-white hover:bg-accent"
                     : "border border-white/30 text-white hover:bg-white/10"
                 }`}
               >
@@ -81,7 +79,7 @@ export default function Header() {
 
             <button
               onClick={() => setMobileOpen(true)}
-              className={`lg:hidden p-2 ${scrolled ? "text-dark" : "text-white"}`}
+              className="lg:hidden p-2 text-white"
               aria-label="菜单"
             >
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -94,11 +92,11 @@ export default function Header() {
 
       {mobileOpen && (
         <div className="fixed inset-0 z-[60] lg:hidden">
-          <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" onClick={() => setMobileOpen(false)} />
-          <div className="absolute right-0 top-0 bottom-0 w-72 bg-white shadow-2xl">
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setMobileOpen(false)} />
+          <div className="absolute right-0 top-0 bottom-0 w-72 bg-[#0a0a0a] shadow-2xl">
             <div className="flex items-center justify-between p-6">
-              <span className="font-semibold text-dark">RayHo</span>
-              <button onClick={() => setMobileOpen(false)} className="p-2 text-text-secondary hover:text-dark">
+              <span className="font-semibold text-white">RayHo</span>
+              <button onClick={() => setMobileOpen(false)} className="p-2 text-white/40 hover:text-white">
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
@@ -107,13 +105,13 @@ export default function Header() {
             <nav className="p-4 space-y-1">
               {navItems.map((item) => (
                 <Link key={item.href} href={item.href} onClick={() => setMobileOpen(false)}
-                  className="block px-4 py-3 text-sm font-medium text-text-secondary hover:text-dark hover:bg-subtle transition-colors">
+                  className="block px-4 py-3 text-sm font-medium text-white/40 hover:text-white hover:bg-white/5 transition-colors">
                   {item.label}
                 </Link>
               ))}
-              <div className="pt-6 mt-4 border-t border-border">
+              <div className="pt-6 mt-4 border-t border-white/8">
                 <Link href="/contact" onClick={() => setMobileOpen(false)}
-                  className="block w-full text-center px-5 py-3 bg-dark text-white text-sm font-medium hover:bg-accent transition-colors">
+                  className="block w-full text-center px-5 py-3 bg-accent text-white text-sm font-medium hover:bg-accent-hover transition-colors">
                   在线咨询
                 </Link>
               </div>

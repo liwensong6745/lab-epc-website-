@@ -26,18 +26,18 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
         </div>
       </section>
 
-      <section className="py-32 md:py-40 bg-white">
+      <section className="py-32 md:py-40 bg-[#050505]">
         <div className="max-w-[1440px] mx-auto px-8 lg:px-16">
           <div className="flex flex-col lg:flex-row gap-20">
             <div className="lg:w-2/3">
               <div
-                className="prose prose-lg max-w-none prose-headings:text-dark prose-headings:font-bold prose-p:text-text-secondary prose-p:font-light prose-p:leading-relaxed prose-li:text-text-secondary prose-li:font-light"
+                className="prose prose-lg max-w-none prose-headings:text-white prose-headings:font-bold prose-p:text-white/50 prose-p:font-light prose-p:leading-relaxed prose-li:text-white/50 prose-li:font-light"
                 dangerouslySetInnerHTML={{ __html: service.bodyHtml || "" }}
               />
             </div>
             <div className="lg:w-1/3">
               <div className="sticky top-28 bg-subtle p-10">
-                <h3 className="font-bold text-dark text-sm tracking-wider uppercase mb-8">服务特色</h3>
+                <h3 className="font-bold text-white text-sm tracking-wider uppercase mb-8">服务特色</h3>
                 <ul className="space-y-4">
                   {service.features.map((f) => (
                     <li key={f} className="flex items-start gap-4 text-sm text-text-secondary font-light">

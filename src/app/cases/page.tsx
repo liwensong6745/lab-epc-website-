@@ -15,7 +15,7 @@ export default function CasesPage() {
         </div>
       </section>
 
-      <section className="py-32 md:py-40 bg-white">
+      <section className="py-32 md:py-40 bg-[#050505]">
         <div className="max-w-[1440px] mx-auto px-8 lg:px-16">
           <CaseList cases={cases} />
         </div>
