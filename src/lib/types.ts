@@ -78,5 +78,5 @@ export interface PageContent {
   heroTitle: string;
   heroSubtitle: string;
   heroImage: string;
-  sections: any[];
+  sections: unknown[];
 }

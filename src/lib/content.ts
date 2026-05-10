@@ -5,6 +5,18 @@ import { marked } from "marked";
 
 const contentDir = path.join(process.cwd(), "content");
 
+type MarkdownFields = {
+  order?: number;
+  challenge?: string;
+  solution?: string;
+  [key: string]: unknown;
+};
+
+function getOrder(value: unknown): number {
+  const order = (value as MarkdownFields).order;
+  return typeof order === "number" ? order : 99;
+}
+
 function mdToHtml(md: string): string {
   if (!md) return "";
   return marked.parse(md) as string;
@@ -21,12 +33,14 @@ function readMarkdownFiles<T>(dir: string): T[] {
       const raw = fs.readFileSync(path.join(fullPath, file), "utf-8");
       const { data, content } = matter(raw);
       // Convert markdown body and common markdown fields to HTML
-      const result: any = { ...data, body: content, bodyHtml: mdToHtml(content) };
+      const result: MarkdownFields = { ...data, body: content, bodyHtml: mdToHtml(content) };
       if (data.challenge) result.challengeHtml = mdToHtml(data.challenge);
       if (data.solution) result.solutionHtml = mdToHtml(data.solution);
       return result as T;
     })
-    .sort((a: any, b: any) => (a.order ?? 99) - (b.order ?? 99));
+    .sort((a, b) => {
+      return getOrder(a) - getOrder(b);
+    });
 }
 
 function readJsonFile<T>(filePath: string, defaultValue: T): T {

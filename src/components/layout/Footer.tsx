@@ -1,6 +1,8 @@
 import Link from "next/link";
+import { getSiteSettings } from "@/lib/content";
 
 export default function Footer() {
+  const settings = getSiteSettings();
   return (
     <footer className="bg-[#F5F5F7] border-t-2 border-black/8">
       <div className="max-w-[1440px] mx-auto px-8 lg:px-16 py-16 md:py-20">
@@ -59,7 +61,9 @@ export default function Footer() {
       <div className="max-w-[1440px] mx-auto px-8 lg:px-16 pb-6 text-xs text-black/30 font-light border-t border-black/8 pt-5">
         <div className="flex flex-col md:flex-row items-center justify-between gap-2">
           <span>© {new Date().getFullYear()} 北京瑞辉筑业实验室科技有限公司</span>
-          <span>京ICP备XXXXXXXX号-X</span>
+          <a href="https://beian.miit.gov.cn" target="_blank" rel="noopener noreferrer" className="hover:text-black/50 transition-colors">
+            {settings.icpLicense}
+          </a>
         </div>
       </div>
     </footer>

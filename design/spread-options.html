@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RayHo spread section options</title>
+    <style>
+      :root {
+        --ink: #1d1d1f;
+        --muted: rgba(29, 29, 31, 0.48);
+        --soft: rgba(29, 29, 31, 0.28);
+        --line: rgba(29, 29, 31, 0.08);
+        --paper: #f5f5f7;
+        --white: #fff;
+        --blue: #007aff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        background: var(--paper);
+        font-family: Inter, "Noto Sans SC", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+        letter-spacing: 0;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .context {
+        height: 360px;
+        display: grid;
+        place-items: center;
+        color: white;
+        background:
+          linear-gradient(180deg, rgba(0,0,0,0.18), rgba(245,245,247,0.98) 100%),
+          url("../public/images/showcase/03.png") center / cover;
+      }
+
+      .context h1 {
+        margin: 0;
+        font-size: 112px;
+        line-height: 0.9;
+        font-weight: 100;
+        letter-spacing: 0.18em;
+        text-indent: 0.18em;
+      }
+
+      .option {
+        position: relative;
+        padding: 124px 64px 132px;
+        overflow: hidden;
+      }
+
+      .option:nth-of-type(odd) {
+        background: var(--paper);
+      }
+
+      .option:nth-of-type(even) {
+        background: #fff;
+      }
+
+      .inner {
+        width: min(100%, 1312px);
+        margin: 0 auto;
+      }
+
+      .option-head {
+        display: grid;
+        grid-template-columns: 1fr 420px;
+        gap: 80px;
+        align-items: end;
+        margin-bottom: 62px;
+      }
+
+      .eyebrow {
+        margin: 0 0 22px;
+        color: rgba(0, 122, 255, 0.64);
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.34em;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        margin: 0;
+        max-width: 760px;
+        font-size: 56px;
+        line-height: 1.12;
+        font-weight: 300;
+      }
+
+      .option-head p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.9;
+      }
+
+      .rule {
+        height: 1px;
+        background: var(--line);
+      }
+
+      .option-label {
+        position: absolute;
+        top: 28px;
+        right: 64px;
+        color: rgba(29,29,31,0.28);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.24em;
+      }
+
+      /* Option A */
+      .atlas {
+        display: grid;
+        grid-template-columns: minmax(0, 0.96fr) minmax(0, 1.04fr);
+        gap: 0;
+        align-items: stretch;
+        min-height: 720px;
+      }
+
+      .atlas-copy {
+        position: relative;
+        padding: 72px 58px;
+        background: #fff;
+        border-right: 1px solid var(--line);
+      }
+
+      .atlas-copy::before {
+        content: "PRECISION ENGINEERING";
+        position: absolute;
+        left: 54px;
+        bottom: 42px;
+        color: rgba(29,29,31,0.045);
+        font-size: 64px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        white-space: nowrap;
+      }
+
+      .atlas-copy h3 {
+        margin: 0;
+        max-width: 440px;
+        font-size: 42px;
+        line-height: 1.16;
+        font-weight: 300;
+      }
+
+      .atlas-copy .lead {
+        max-width: 420px;
+        margin: 32px 0 72px;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.9;
+      }
+
+      .specs {
+        display: grid;
+        gap: 1px;
+        max-width: 470px;
+        background: var(--line);
+      }
+
+      .spec {
+        display: grid;
+        grid-template-columns: 130px 1fr;
+        gap: 28px;
+        padding: 22px 0;
+        background: #fff;
+      }
+
+      .spec b {
+        color: rgba(0,122,255,0.68);
+        font-size: 11px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+      }
+
+      .spec span {
+        color: rgba(29,29,31,0.54);
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      .atlas-visual {
+        position: relative;
+        min-height: 720px;
+        overflow: hidden;
+        background: #fff;
+      }
+
+      .atlas-visual .poster {
+        position: absolute;
+        left: 7%;
+        top: 50%;
+        width: 76%;
+        transform: translateY(-50%);
+        box-shadow: 0 34px 70px rgba(0,0,0,0.08);
+      }
+
+      .crop {
+        position: absolute;
+        overflow: hidden;
+        background: #f7f7f8;
+        box-shadow: 0 18px 42px rgba(0,0,0,0.08);
+      }
+
+      .crop img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .crop.one {
+        right: 0;
+        top: 72px;
+        width: 230px;
+        height: 150px;
+      }
+
+      .crop.two {
+        right: 44px;
+        bottom: 62px;
+        width: 250px;
+        height: 174px;
+      }
+
+      .note {
+        position: absolute;
+        z-index: 3;
+        padding: 12px 14px;
+        color: rgba(29,29,31,0.78);
+        background: rgba(255,255,255,0.82);
+        border: 1px solid rgba(0,0,0,0.06);
+        backdrop-filter: blur(10px);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+      }
+
+      .note.a {
+        left: 22px;
+        top: 142px;
+      }
+
+      .note.b {
+        right: 180px;
+        bottom: 182px;
+      }
+
+      /* Option B */
+      .scan-stage {
+        position: relative;
+        min-height: 790px;
+        overflow: hidden;
+        background: #0f1012;
+      }
+
+      .scan-stage img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: saturate(0.86) contrast(0.98);
+      }
+
+      .scan-stage::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(90deg, rgba(245,245,247,0.94) 0, rgba(245,245,247,0.72) 33%, rgba(245,245,247,0.1) 66%, rgba(245,245,247,0.5) 100%),
+          linear-gradient(180deg, rgba(245,245,247,0.04), rgba(245,245,247,0.92) 100%);
+      }
+
+      .scan-content {
+        position: relative;
+        z-index: 2;
+        min-height: 790px;
+        display: grid;
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 70px;
+        padding: 68px;
+      }
+
+      .scan-title {
+        align-self: start;
+      }
+
+      .scan-title h3 {
+        margin: 0;
+        max-width: 430px;
+        font-size: 46px;
+        line-height: 1.14;
+        font-weight: 300;
+      }
+
+      .scan-title p {
+        max-width: 390px;
+        margin: 28px 0 0;
+        color: rgba(29,29,31,0.5);
+        font-size: 15px;
+        line-height: 1.9;
+      }
+
+      .trace-board {
+        align-self: end;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1px;
+        background: rgba(29,29,31,0.1);
+      }
+
+      .trace {
+        min-height: 155px;
+        padding: 24px;
+        background: rgba(255,255,255,0.74);
+        backdrop-filter: blur(12px);
+      }
+
+      .trace small {
+        color: rgba(0,122,255,0.72);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
+
+      .trace b {
+        display: block;
+        margin-top: 38px;
+        font-size: 24px;
+        font-weight: 300;
+      }
+
+      .trace span {
+        display: block;
+        margin-top: 10px;
+        color: rgba(29,29,31,0.44);
+        font-size: 13px;
+        line-height: 1.7;
+      }
+
+      .marker {
+        position: absolute;
+        z-index: 3;
+        color: #fff;
+        background: rgba(29,29,31,0.68);
+        border: 1px solid rgba(255,255,255,0.22);
+        padding: 10px 12px;
+        font-size: 11px;
+        letter-spacing: 0.08em;
+      }
+
+      .marker::after {
+        content: "";
+        position: absolute;
+        left: 18px;
+        top: 100%;
+        width: 1px;
+        height: 54px;
+        background: var(--blue);
+      }
+
+      .marker.m1 {
+        left: 55%;
+        top: 28%;
+      }
+
+      .marker.m2 {
+        left: 68%;
+        top: 54%;
+      }
+
+      .marker.m3 {
+        left: 42%;
+        top: 66%;
+      }
+
+      /* Option C */
+      .canvas {
+        position: relative;
+        min-height: 760px;
+        display: grid;
+        grid-template-columns: 360px 1fr 280px;
+        gap: 28px;
+        align-items: stretch;
+      }
+
+      .canvas-main {
+        position: relative;
+        overflow: hidden;
+        background: #fff;
+      }
+
+      .canvas-main img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .canvas-main::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, transparent 0%, rgba(255,255,255,0.2) 100%);
+      }
+
+      .canvas-copy {
+        padding: 48px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .canvas-copy h3 {
+        margin: 0;
+        font-size: 42px;
+        line-height: 1.15;
+        font-weight: 300;
+      }
+
+      .canvas-copy p {
+        max-width: 300px;
+        margin: 28px 0 0;
+        color: var(--muted);
+        font-size: 15px;
+        line-height: 1.9;
+      }
+
+      .vertical-index {
+        display: grid;
+        gap: 28px;
+      }
+
+      .vertical-index div {
+        border-top: 1px solid var(--line);
+        padding-top: 18px;
+      }
+
+      .vertical-index b {
+        display: block;
+        color: rgba(0,122,255,0.68);
+        font-size: 12px;
+        letter-spacing: 0.22em;
+      }
+
+      .vertical-index span {
+        display: block;
+        margin-top: 12px;
+        color: rgba(29,29,31,0.5);
+        font-size: 14px;
+      }
+
+      .side-strip {
+        display: grid;
+        grid-template-rows: 1.1fr 0.9fr;
+        gap: 28px;
+      }
+
+      .side-shot {
+        overflow: hidden;
+        background: #fff;
+      }
+
+      .side-shot img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .floating-poster {
+        position: absolute;
+        left: 268px;
+        bottom: 48px;
+        z-index: 4;
+        width: 360px;
+        background: white;
+        box-shadow: 0 30px 70px rgba(0,0,0,0.14);
+      }
+
+      .floating-poster img {
+        width: 100%;
+      }
+
+      .caption-line {
+        position: absolute;
+        z-index: 5;
+        left: 656px;
+        bottom: 128px;
+        width: 230px;
+        padding-top: 16px;
+        border-top: 1px solid var(--blue);
+        color: rgba(29,29,31,0.56);
+        font-size: 13px;
+        line-height: 1.7;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="context">
+        <h1>RAYHO</h1>
+      </section>
+
+      <section class="option">
+        <div class="option-label">OPTION A / ATLAS</div>
+        <div class="inner">
+          <div class="option-head">
+            <div>
+              <p class="eyebrow">Spread Direction</p>
+              <h2>让产品像画册一样被看见。</h2>
+            </div>
+            <p>保留现有浅色高级感，但取消“左图右文”的企业站套路。图片是主角，文字只做旁注。</p>
+          </div>
+
+          <div class="atlas">
+            <div class="atlas-copy">
+              <p class="eyebrow">Precision Engineering</p>
+              <h3>一张台面，承担实验室每天的高频使用。</h3>
+              <p class="lead">不展开长文，只把客户判断产品可靠性的依据摆出来。</p>
+              <div class="specs">
+                <div class="spec"><b>Worktop</b><span>理化板 / 陶瓷 / 环氧树脂台面</span></div>
+                <div class="spec"><b>Interface</b><span>水、电、气接口与实验动线同步规划</span></div>
+                <div class="spec"><b>Module</b><span>中央岛台、边台、仪器台、天平台可组合</span></div>
+              </div>
+            </div>
+            <div class="atlas-visual">
+              <img class="poster" src="../public/images/showcase/01.png" alt="产品海报" />
+              <div class="crop one"><img src="../public/images/showcase/01.png" alt="" /></div>
+              <div class="crop two"><img src="../public/images/showcase/03.png" alt="" /></div>
+              <div class="note a">DETAIL / SOCKET</div>
+              <div class="note b">SURFACE / LOAD</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="option">
+        <div class="option-label">OPTION B / SYSTEM SCAN</div>
+        <div class="inner">
+          <div class="option-head">
+            <div>
+              <p class="eyebrow">Spread Direction</p>
+              <h2>把产品放回实验室系统里。</h2>
+            </div>
+            <p>这版更接近“不是卖柜子，是做系统”。用真实实验室大图承载丰富度，文字变成扫描层和标注。</p>
+          </div>
+
+          <div class="scan-stage">
+            <img src="../public/images/showcase/04.png" alt="实验室系统" />
+            <div class="marker m1">AIR / 负压与排风路径</div>
+            <div class="marker m2">MEP / 水电气接口</div>
+            <div class="marker m3">FLOW / 人员与样本动线</div>
+            <div class="scan-content">
+              <div class="scan-title">
+                <p class="eyebrow">Lab Environment</p>
+                <h3>真正高级的实验室，靠看不见的系统支撑。</h3>
+                <p>用户看到的是整洁，真正决定体验的是空气、管路、动线和家具之间的协同。</p>
+              </div>
+              <div class="trace-board">
+                <div class="trace"><small>01 / Air</small><b>气流</b><span>补风、排风和面风速共同决定安全边界。</span></div>
+                <div class="trace"><small>02 / Flow</small><b>动线</b><span>人员、样本、试剂、废弃物互不干扰。</span></div>
+                <div class="trace"><small>03 / MEP</small><b>管路</b><span>气体、纯水、废水和电气隐藏在空间里。</span></div>
+                <div class="trace"><small>04 / Furniture</small><b>家具</b><span>台面、柜体、插座、龙头承担高频使用。</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="option">
+        <div class="option-label">OPTION C / CONTINUOUS CANVAS</div>
+        <div class="inner">
+          <div class="option-head">
+            <div>
+              <p class="eyebrow">Spread Direction</p>
+              <h2>不要做模块，做一段连续画布。</h2>
+            </div>
+            <p>文字、项目图、产品海报和局部图叠在同一个版面里，丰富度来自层次，而不是更多卡片。</p>
+          </div>
+
+          <div class="canvas">
+            <div class="canvas-copy">
+              <div>
+                <p class="eyebrow">Precision Lab</p>
+                <h3>从空间到产品，保持同一套秩序。</h3>
+                <p>这版更像杂志跨页，适合承接首屏的高级感。</p>
+              </div>
+              <div class="vertical-index">
+                <div><b>01 / PRODUCT</b><span>实验室家具系统</span></div>
+                <div><b>02 / ENVIRONMENT</b><span>实验室整体空间</span></div>
+                <div><b>03 / DETAIL</b><span>台面、接口与管线</span></div>
+              </div>
+            </div>
+
+            <div class="canvas-main">
+              <img src="../public/images/showcase/03.png" alt="实验室空间" />
+            </div>
+
+            <div class="side-strip">
+              <div class="side-shot"><img src="../public/images/fumehoods/01.png" alt="通风柜" /></div>
+              <div class="side-shot"><img src="../public/images/showcase/04.png" alt="实验室局部" /></div>
+            </div>
+
+            <div class="floating-poster">
+              <img src="../public/images/showcase/01.png" alt="产品海报" />
+            </div>
+            <div class="caption-line">产品不再作为分类入口，而是作为系统中的关键部件出现。</div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

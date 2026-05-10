@@ -1,24 +1,63 @@
 export default function ImageGallery() {
-  return (
-    <section className="py-32 md:py-48 bg-white px-8 lg:px-16">
-      <div className="max-w-[1440px] mx-auto">
+  const heading = (
+    <>
+      不被察觉的空间<br />正是我们建造的一切
+    </>
+  );
+  const sub = "The space you never notice is the space we built.";
 
-        {/* Text */}
-        <div className="text-center">
+  return (
+    <section>
+      {/* Desktop: image + text overlay */}
+      <div className="hidden lg:block relative overflow-hidden">
+        <img
+          src="/images/横幅图.png"
+          alt=""
+          className="w-full h-auto block opacity-95"
+          draggable={false}
+        />
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <div className="text-center px-8 -translate-x-[1.5%]">
+            <p
+              className="text-[#1D1D1F]/35 font-light tracking-tight leading-relaxed max-w-lg mx-auto select-none"
+              style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 200, fontSize: "clamp(1.5rem, 3.5vw, 3.5rem)" }}
+            >
+              {heading}
+            </p>
+            <p
+              className="text-black/35 text-sm font-light tracking-[0.2em] mt-4 max-w-sm mx-auto select-none"
+              style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}
+            >
+              {sub}
+            </p>
+            <div className="w-16 h-[1.5px] rounded-full bg-[#007AFF]/15 mx-auto mt-16" />
+          </div>
+        </div>
+      </div>
+
+      {/* Tablet & mobile: image + text stacked on solid bg */}
+      <div className="lg:hidden">
+        <img
+          src="/images/横幅图.png"
+          alt=""
+          className="w-full h-auto block opacity-95"
+          draggable={false}
+        />
+        <div className="bg-white py-24 text-center px-8">
           <p
-            className="text-[#1D1D1F]/85 text-2xl md:text-4xl lg:text-5xl font-light tracking-tight leading-relaxed max-w-3xl mx-auto select-none"
+            className="text-[#1D1D1F]/35 text-2xl md:text-3xl font-light tracking-tight leading-relaxed max-w-sm mx-auto select-none"
             style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 200 }}
           >
-            不被察觉的空间<br />正是我们建造的一切
+            {heading}
           </p>
-          <p className="text-black/45 text-sm font-light tracking-[0.2em] mt-6 select-none"
-            style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>
-            The space you never notice is the space we built.
+          <p
+            className="text-black/35 text-sm font-light tracking-[0.2em] mt-6 select-none"
+            style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}
+          >
+            {sub}
           </p>
-          {/* Blueprint line */}
-          <div className="w-40 h-[0.5px] bg-gradient-to-r from-transparent via-[#007AFF]/15 to-transparent mx-auto mt-16 md:mt-20" />
+          <div className="w-16 h-[1.5px] rounded-full bg-[#007AFF]/15 mx-auto mt-12" />
         </div>
-
       </div>
     </section>
   );

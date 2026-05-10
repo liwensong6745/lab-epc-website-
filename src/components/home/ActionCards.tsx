@@ -1,40 +1,91 @@
 import Link from "next/link";
 
 const cards = [
-  { en: "Durable", title: "产品中心", desc: "模块化实验室家具系统", href: "/services",
+  {
+    en: "Durable",
+    title: "产品中心",
+    desc: "模块化实验室家具系统",
+    href: "/services",
+    borderColor: "#007AFF",
     blobs: [
-      { color: "rgba(0,122,255,0.28)", delay: "0s" },
-      { color: "rgba(6,182,212,0.18)", delay: "2s" },
-    ]},
-  { en: "The Proof", title: "项目实证", desc: "每一次交付都是作品", href: "/cases",
+      { color: "rgba(0,122,255,0.22)", delay: "0s", top: "-10%", left: "-15%" },
+      { color: "rgba(6,182,212,0.14)", delay: "2s", top: "25%", left: "20%" },
+    ],
+  },
+  {
+    en: "The Proof",
+    title: "项目实证",
+    desc: "每一次交付都是作品",
+    href: "/cases",
+    borderColor: "#F59E0B",
     blobs: [
-      { color: "rgba(245,158,11,0.20)", delay: "1s" },
-      { color: "rgba(0,122,255,0.16)", delay: "3s" },
-    ]},
-  { en: "The Craft", title: "见证品质", desc: "安静地做好，骄傲地展示", href: "/craft",
+      { color: "rgba(245,158,11,0.16)", delay: "1s", top: "-10%", left: "-15%" },
+      { color: "rgba(0,122,255,0.12)", delay: "3s", top: "25%", left: "20%" },
+    ],
+  },
+  {
+    en: "The Craft",
+    title: "见证品质",
+    desc: "安静地做好，骄傲地展示",
+    href: "/craft",
+    borderColor: "#06B6D4",
     blobs: [
-      { color: "rgba(6,182,212,0.22)", delay: "0.5s" },
-      { color: "rgba(139,92,246,0.20)", delay: "2.5s" },
-    ]},
-  { en: "Focused", title: "关于瑞辉", desc: "把热情，写进每一个实验室", href: "/about",
+      { color: "rgba(6,182,212,0.18)", delay: "0.5s", top: "-10%", left: "-15%" },
+      { color: "rgba(139,92,246,0.16)", delay: "2.5s", top: "25%", left: "20%" },
+    ],
+  },
+  {
+    en: "Focused",
+    title: "关于瑞辉",
+    desc: "把热情，写进每一个实验室",
+    href: "/about",
+    borderColor: "#8B5CF6",
     blobs: [
-      { color: "rgba(139,92,246,0.22)", delay: "1.5s" },
-      { color: "rgba(245,158,11,0.16)", delay: "3.5s" },
-    ]},
+      { color: "rgba(139,92,246,0.18)", delay: "1.5s", top: "-10%", left: "-15%" },
+      { color: "rgba(245,158,11,0.12)", delay: "3.5s", top: "25%", left: "20%" },
+    ],
+  },
 ];
+
+function CardIcon({ en }: { en: string }) {
+  const cls = "w-3 h-3 text-[#007AFF]/40";
+  const icon = (d: React.ReactNode) => (
+    <svg className={cls} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+      {d}
+    </svg>
+  );
+
+  switch (en) {
+    case "Durable":
+      return icon(<><rect x="4" y="4" width="16" height="3" rx="1" /><rect x="4" y="10" width="16" height="3" rx="1" /><rect x="4" y="16" width="16" height="3" rx="1" /></>);
+    case "The Proof":
+      return icon(<><path d="M9 12l2 2 4-4" /><rect x="4" y="3" width="16" height="18" rx="2" /></>);
+    case "The Craft":
+      return icon(<><path d="M12 2L3 7v5c0 6 4 10 9 12 5-2 9-6 9-12V7l-9-5z" /><polyline points="8 12 11 15 16 9" /></>);
+    case "Focused":
+      return icon(<><circle cx="12" cy="12" r="9" /><path d="M12 2v4m0 12v4M2 12h4m12 0h4" /><circle cx="12" cy="12" r="3" /></>);
+    default:
+      return icon(<circle cx="12" cy="12" r="4" />);
+  }
+}
 
 export default function ActionCards() {
   return (
-    <section className="py-28 md:py-40 bg-[#F5F5F7]">
-      <div className="max-w-[1440px] mx-auto px-8 lg:px-16">
-        <div className="flex flex-wrap justify-center gap-1">
+    <section className="py-24 md:py-36 bg-[#F5F5F7]">
+      <div className="max-w-[1600px] mx-auto px-8 lg:px-20">
+
+        {/* Thin top rule to bridge from previous section */}
+        <div className="w-full h-px bg-black/[0.04] mb-16 md:mb-24" />
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 max-w-[1200px] mx-auto">
           {cards.map((card) => (
             <Link
               key={card.href}
               href={card.href}
-              className="group relative block bg-white/60 px-10 md:px-14 pt-24 md:pt-36 pb-32 md:pb-44 hover:bg-white/20 hover:backdrop-blur-xl transition-all duration-700 shadow-[0_1px_2px_rgba(0,0,0,0.04),0_8px_16px_rgba(0,0,0,0.04),0_24px_48px_rgba(0,0,0,0.06)] hover:shadow-[0_1px_2px_rgba(0,0,0,0.02),0_16px_32px_rgba(0,0,0,0.04),0_40px_80px_rgba(0,0,0,0.06)] w-full md:w-[calc(50%-2px)] lg:w-[320px] overflow-hidden"
+              style={{ "--accent": card.borderColor } as React.CSSProperties}
+              className="group relative block bg-white border rounded-2xl px-8 md:px-10 pt-10 pb-28 md:pb-32 hover:-translate-y-2 hover:shadow-xl transition-all duration-500 overflow-hidden border-black/[0.08] hover:border-[var(--accent)]"
             >
-              {/* Flowing blobs within card */}
+              {/* Flowing blobs */}
               <div className="absolute inset-0 pointer-events-none">
                 {card.blobs.map((blob, i) => (
                   <div
@@ -43,8 +94,8 @@ export default function ActionCards() {
                     style={{
                       background: `radial-gradient(circle, ${blob.color}, transparent 65%)`,
                       animationDelay: blob.delay,
-                      top: i === 0 ? "-10%" : "25%",
-                      left: i === 0 ? "-15%" : "20%",
+                      top: blob.top,
+                      left: blob.left,
                     }}
                   />
                 ))}
@@ -52,20 +103,27 @@ export default function ActionCards() {
 
               {/* Content */}
               <div className="relative">
-                <p className="text-[9px] text-[#007AFF]/40 tracking-[0.3em] font-medium mb-3 group-hover:text-[#007AFF]/80 transition-colors duration-700 select-none">
+                {/* Icon badge */}
+                <span className="w-6 h-6 rounded-md bg-[#007AFF]/6 flex items-center justify-center mb-5">
+                  <CardIcon en={card.en} />
+                </span>
+
+                <p className="text-[9px] text-[#007AFF]/30 tracking-[0.3em] font-medium mb-3 select-none">
                   {card.en}
                 </p>
-                <h3 className="text-xl md:text-2xl font-bold text-black/60 transition-colors duration-700 mb-6 tracking-tight select-none">
+                <h3 className="text-lg font-light text-[#1D1D1F] tracking-tight mb-3 select-none"
+                  style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>
                   {card.title}
                 </h3>
-                <div className="w-8 h-px bg-black/10 group-hover:bg-black/20 transition-colors duration-700 mb-6" />
-                <p className="text-sm text-black/40 group-hover:text-black/65 transition-colors duration-700 font-light select-none leading-relaxed">
+                <div className="w-6 h-px bg-black/8 mb-4" />
+                <p className="text-xs text-black/35 font-light leading-relaxed select-none">
                   {card.desc}
                 </p>
               </div>
 
-              <div className="absolute bottom-10 md:bottom-14 left-1/2 -translate-x-1/2 w-10 h-10 md:w-11 md:h-11 rounded-full border border-black/8 flex items-center justify-center text-black/20 group-hover:border-black/25 group-hover:text-black/60 group-hover:bg-black/8 transition-all duration-700">
-                <svg className="w-4 h-4 group-hover:translate-x-0.5 transition-transform duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              {/* Arrow */}
+              <div className="absolute bottom-6 right-6 md:bottom-8 md:right-8 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-500">
+                <svg className="w-4 h-4 text-[#007AFF]/30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </div>

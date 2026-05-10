@@ -6,7 +6,10 @@ export default function CraftPage() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [visible, setVisible] = useState(false);
 
-  useEffect(() => { setVisible(true); }, []);
+  useEffect(() => {
+    const frame = requestAnimationFrame(() => setVisible(true));
+    return () => cancelAnimationFrame(frame);
+  }, []);
 
   useEffect(() => {
     const video = videoRef.current;
