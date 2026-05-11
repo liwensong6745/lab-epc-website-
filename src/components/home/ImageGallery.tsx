@@ -16,11 +16,11 @@ export default function ImageGallery() {
           className="w-full h-auto block opacity-95"
           draggable={false}
         />
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none" style={{ marginTop: "-6%" }}>
           <div className="text-center px-8 -translate-x-[1.5%]">
             <p
               className="text-[#1D1D1F]/35 font-light tracking-tight leading-relaxed max-w-lg mx-auto select-none"
-              style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 200, fontSize: "clamp(1.5rem, 3.5vw, 3.5rem)" }}
+              style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 200, fontSize: "clamp(1.2rem, 2.5vw, 2.5rem)" }}
             >
               {heading}
             </p>
@@ -30,33 +30,33 @@ export default function ImageGallery() {
             >
               {sub}
             </p>
-            <div className="w-16 h-[1.5px] rounded-full bg-[#007AFF]/15 mx-auto mt-16" />
           </div>
         </div>
       </div>
 
-      {/* Tablet & mobile: image + text stacked on solid bg */}
-      <div className="lg:hidden">
+      {/* Tablet & mobile: text overlaid on image */}
+      <div className="lg:hidden relative overflow-hidden">
         <img
           src="/images/横幅图.png"
           alt=""
           className="w-full h-auto block opacity-95"
           draggable={false}
         />
-        <div className="bg-white py-24 text-center px-8">
-          <p
-            className="text-[#1D1D1F]/35 text-2xl md:text-3xl font-light tracking-tight leading-relaxed max-w-sm mx-auto select-none"
-            style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 200 }}
-          >
-            {heading}
-          </p>
-          <p
-            className="text-black/35 text-sm font-light tracking-[0.2em] mt-6 select-none"
-            style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}
-          >
-            {sub}
-          </p>
-          <div className="w-16 h-[1.5px] rounded-full bg-[#007AFF]/15 mx-auto mt-12" />
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none" style={{ marginTop: "-6%" }}>
+          <div className="text-center px-8">
+            <p
+              className="text-[#1D1D1F]/35 text-xl md:text-2xl font-light tracking-tight leading-relaxed max-w-sm mx-auto select-none"
+              style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 200 }}
+            >
+              {heading}
+            </p>
+            <p
+              className="text-black/35 text-sm font-light tracking-[0.2em] mt-4 select-none"
+              style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}
+            >
+              {sub}
+            </p>
+          </div>
         </div>
       </div>
     </section>

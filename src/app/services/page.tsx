@@ -131,7 +131,7 @@ export default function ServicesPage() {
       </section>
 
       {/* ═══════ Spread 1 — Furniture ═══════ */}
-      <section className="bg-white pt-32 md:pt-48 pb-0">
+      <section id="furniture" className="bg-white pt-32 md:pt-48 pb-0">
         <div className="max-w-[1200px] mx-auto px-8 lg:px-16">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-0 lg:items-center">
 
@@ -160,7 +160,7 @@ export default function ServicesPage() {
       </section>
 
       {/* ═══════ Spread 2 — 3D fume hood showcase ═══════ */}
-      <section className="bg-white pt-20 md:pt-28 pb-32 md:pb-48">
+      <section id="fumehood" className="bg-white pt-20 md:pt-28 pb-32 md:pb-48">
         <div className="max-w-[1200px] mx-auto px-8 lg:px-16">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-0 lg:items-center">
 
@@ -206,7 +206,7 @@ export default function ServicesPage() {
       </section>
 
       {/* ═══════ Spread 3 — Infrastructure card grid ═══════ */}
-      <section className="bg-white py-32 md:py-48">
+      <section id="infrastructure" className="bg-white py-32 md:py-48">
         <div className="max-w-[1200px] mx-auto px-8 lg:px-16">
           {/* Top — centered heading */}
           <div className="text-center mb-12 md:mb-20">
@@ -253,7 +253,7 @@ export default function ServicesPage() {
       </section>
 
       {/* ═══════ Spread 4 — Staggered process ═══════ */}
-      <section className="bg-[#F5F5F7] pt-24 pb-32 md:pt-36 md:pb-48">
+      <section id="tailored" className="bg-[#F5F5F7] pt-24 pb-32 md:pt-36 md:pb-48">
         <div className="max-w-[1200px] mx-auto px-8 lg:px-16">
 
           {/* Top — centered heading block */}

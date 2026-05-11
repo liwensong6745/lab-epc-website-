@@ -68,6 +68,7 @@ export function getSiteSettings(): SiteSettings {
     address: "北京市昌平区国家信息产业基地13号1046",
     wechatQr: "/images/wechat-qr.png",
     icpLicense: "京ICP备XXXXXXXX号",
+    policeBeian: "",
     description: "专业实验室整体解决方案服务商",
   });
 }

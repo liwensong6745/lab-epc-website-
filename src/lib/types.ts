@@ -7,6 +7,7 @@ export interface SiteSettings {
   address: string;
   wechatQr: string;
   icpLicense: string;
+  policeBeian: string;
   description: string;
 }
 
