@@ -28,7 +28,7 @@ function DetailList({ details }: { details: string[] }) {
         const parts = d.split(" | ");
         const label = parts.length === 2 ? parts[0] : "";
         return (
-          <li key={d} className="flex items-center gap-3 text-xs font-light select-none border border-black/[0.05] rounded-xl px-4 py-3 hover:border-black/[0.1] hover:bg-black/[0.01] transition-all duration-300">
+          <li key={d} className="flex items-center gap-3 text-xs font-light border border-black/[0.05] rounded-xl px-4 py-3 hover:border-black/[0.1] hover:bg-black/[0.01] transition-all duration-300">
             <span className="w-5 h-5 rounded-md bg-[#007AFF]/6 flex items-center justify-center shrink-0">
               <IconFor label={label} />
             </span>
@@ -101,7 +101,7 @@ export default function MagazineSpread() {
             {/* Text — takes the lead this time */}
             <div className="lg:w-[48%]">
               <p className="text-[10px] text-[#007AFF]/45 tracking-[0.35em] font-medium mb-6 select-none">{s1.en}</p>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-[#1D1D1F] tracking-tight leading-tight mb-8 select-none"
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-[#1D1D1F] tracking-tight leading-tight mb-8"
                 style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 200 }}>{s1.title}</h2>
               <div className="w-10 h-px bg-black/8 mb-6" />
               <p className="text-sm text-black/50 font-light leading-relaxed mb-8 max-w-md select-none" style={indentStyle}>{s1.desc}</p>
@@ -141,7 +141,7 @@ export default function MagazineSpread() {
             {/* Text */}
             <div className="lg:w-[42%] lg:pr-16">
               <p className="text-[10px] text-[#007AFF]/45 tracking-[0.35em] font-medium mb-6 select-none">{s2.en}</p>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-[#1D1D1F] tracking-tight leading-tight mb-8 select-none"
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-[#1D1D1F] tracking-tight leading-tight mb-8"
                 style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 200 }}>{s2.title}</h2>
               <div className="w-10 h-px bg-black/8 mb-6" />
               <p className="text-sm text-black/50 font-light leading-relaxed mb-8 max-w-md select-none" style={indentStyle}>{s2.desc}</p>
@@ -167,7 +167,7 @@ export default function MagazineSpread() {
 
             <div className="lg:w-[38%]">
               <p className="text-[10px] text-[#007AFF]/45 tracking-[0.35em] font-medium mb-6 select-none">{s3.en}</p>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-[#1D1D1F] tracking-tight leading-tight mb-8 select-none"
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-[#1D1D1F] tracking-tight leading-tight mb-8"
                 style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 200 }}>{s3.title}</h2>
               <div className="w-10 h-px bg-black/8 mb-6" />
               <p className="text-sm text-black/50 font-light leading-relaxed mb-8 max-w-md select-none" style={indentStyle}>{s3.desc}</p>

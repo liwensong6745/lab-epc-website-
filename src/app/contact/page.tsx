@@ -12,11 +12,11 @@ export default function ContactPage() {
       <section className="pt-40 md:pt-52 pb-20 md:pb-28 bg-white">
         <div className="max-w-[1440px] mx-auto px-8 lg:px-16">
           <p className="text-[#007AFF]/35 text-[9px] tracking-[0.3em] font-medium mb-8 select-none">READY TO START</p>
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-light text-[#1D1D1F] tracking-tight leading-tight max-w-3xl select-none"
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-light text-[#1D1D1F] tracking-tight leading-tight max-w-3xl"
             style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>
             告诉我们<span className="font-bold">需求</span>，<br />剩下的交给<span className="font-bold">我们</span>
           </h1>
-          <p className="text-black/30 text-sm font-light mt-6 max-w-lg select-none leading-relaxed">
+          <p className="text-black/30 text-sm font-light mt-6 max-w-lg leading-relaxed">
             专家团队将提供一对一的专业咨询
           </p>
         </div>
@@ -28,12 +28,12 @@ export default function ContactPage() {
           {/* Contact Info */}
           <div className="mb-14">
             <div className="w-8 h-px bg-black/[0.12] mb-6" />
-            <p className="text-black/50 text-2xl md:text-3xl font-light tracking-tight mb-3 select-none"
+            <p className="text-black/50 text-2xl md:text-3xl font-light tracking-tight mb-3"
               style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>
               联系我们
             </p>
             <p className="text-[#007AFF]/35 text-[9px] tracking-[0.3em] font-medium mb-10 select-none">CONTACT</p>
-            <div className="space-y-4 mb-10 text-sm font-light select-none">
+            <div className="space-y-4 mb-10 text-sm font-light">
               <div className="flex gap-3 items-center">
                 <div className="w-8 h-8 rounded-full bg-[#1D1D1F] flex items-center justify-center shrink-0 text-white/70">
                   <svg className="w-[18px] h-[18px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.2}>
@@ -73,7 +73,7 @@ export default function ContactPage() {
           </div>
 
           <div className="w-16 h-px bg-black/[0.08] mb-10" />
-          <p className="text-black/50 text-2xl md:text-3xl font-light tracking-tight mb-3 select-none"
+          <p className="text-black/50 text-2xl md:text-3xl font-light tracking-tight mb-3"
             style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>
             留言
           </p>
@@ -86,8 +86,14 @@ export default function ContactPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
               </div>
-              <h3 className="text-lg font-bold text-[#1D1D1F] mb-3 select-none">消息已送达</h3>
-              <p className="text-black/25 text-sm font-light select-none">我们将在1个工作日内与您联系</p>
+              <h3 className="text-lg font-bold text-[#1D1D1F] mb-3">消息已送达</h3>
+              <p className="text-black/25 text-sm font-light mb-8">我们将在1个工作日内与您联系</p>
+              <button
+                onClick={() => setSubmitted(false)}
+                className="inline-flex items-center gap-3 px-10 py-3.5 bg-[#1D1D1F] text-white text-sm tracking-[0.1em] font-medium rounded-full hover:bg-[#007AFF] transition-all duration-500"
+              >
+                再次留言
+              </button>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-7">
@@ -116,7 +122,7 @@ export default function ContactPage() {
                 <label className="block text-sm text-black/60 font-light mb-2 select-none">描述</label>
                 <textarea required rows={4} className="w-full py-2 bg-transparent border border-black/[0.15] focus:border-black/40 outline-none transition-colors text-[#1D1D1F] font-light text-sm resize-none placeholder:text-black/20 rounded-md px-4" placeholder="请简要描述您的项目需求" />
               </div>
-              <button type="submit" className="inline-flex items-center gap-3 px-10 py-3.5 bg-[#1D1D1F] text-white text-sm tracking-[0.1em] font-medium rounded-full hover:bg-[#007AFF] transition-all duration-500 select-none">
+              <button type="submit" className="inline-flex items-center gap-3 px-10 py-3.5 bg-[#1D1D1F] text-white text-sm tracking-[0.1em] font-medium rounded-full hover:bg-[#007AFF] transition-all duration-500">
                 提交
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />

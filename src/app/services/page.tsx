@@ -1,5 +1,3 @@
-"use client";
-
 import FumeHoodFan from "@/components/services/FumeHoodFan";
 import { LuWrench, LuDroplet, LuRecycle, LuWind } from "react-icons/lu";
 
@@ -22,7 +20,7 @@ function DetailItem({ d }: { d: string }) {
   const parts = d.split(" | ");
   const label = parts.length === 2 ? parts[0] : "";
   return (
-    <li className="flex items-center gap-3 text-xs font-light select-none border border-black/[0.05] rounded-xl px-4 py-3 hover:border-black/[0.1] hover:bg-black/[0.01] transition-all duration-300">
+    <li className="flex items-center gap-3 text-xs font-light border border-black/[0.05] rounded-xl px-4 py-3 hover:border-black/[0.1] hover:bg-black/[0.01] transition-all duration-300">
       <span className="w-5 h-5 rounded-md bg-[#007AFF]/6 flex items-center justify-center shrink-0">
         <IconFor label={label} />
       </span>
@@ -118,11 +116,11 @@ export default function ServicesPage() {
         <div className="relative z-10 h-full flex items-end pb-16 md:pb-24">
           <div className="max-w-[1440px] mx-auto px-8 lg:px-16 w-full">
             <p className="text-white/60 text-[9px] tracking-[0.3em] font-medium mb-8 select-none">DURABLE BY DESIGN</p>
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-light text-white tracking-tight leading-tight max-w-3xl select-none drop-shadow-[0_2px_12px_rgba(0,0,0,0.3)]"
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-light text-white tracking-tight leading-tight max-w-3xl drop-shadow-[0_2px_12px_rgba(0,0,0,0.3)]"
               style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>
               每一个<span className="font-bold">细节</span>，<br />都经得起<span className="font-bold">审视</span>
             </h1>
-            <p className="text-white/50 text-sm font-light mt-6 max-w-lg select-none leading-relaxed drop-shadow-[0_1px_6px_rgba(0,0,0,0.3)]">
+            <p className="text-white/50 text-sm font-light mt-6 max-w-lg leading-relaxed drop-shadow-[0_1px_6px_rgba(0,0,0,0.3)]">
               模块化实验室家具与系统集成，精密制造，从台面到管路
             </p>
             <div className="w-40 h-[0.5px] bg-white/20 mt-12" />
@@ -137,7 +135,7 @@ export default function ServicesPage() {
 
             {/* Image */}
             <div className="lg:w-[56%] rounded-2xl overflow-visible relative -translate-x-8">
-              <img src="/images/实验室家具系统.png" alt="" className="w-full h-auto object-contain select-none" draggable={false} />
+              <img src="/images/实验室家具系统.png" alt="" className="w-full h-auto object-contain" draggable={false} />
               <div className="absolute inset-0 pointer-events-none select-none z-10 flex items-center justify-center">
                 <span className="text-[72px] md:text-[96px] lg:text-[120px] font-black text-black/[0.04] leading-none tracking-tighter select-none">RAYHO</span>
               </div>
@@ -146,10 +144,10 @@ export default function ServicesPage() {
             {/* Text */}
             <div className="lg:w-[44%]">
               <p className="text-[10px] text-[#007AFF]/45 tracking-[0.35em] font-medium mb-6 select-none">{s1.en}</p>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-[#1D1D1F] tracking-tight leading-tight mb-8 select-none"
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-[#1D1D1F] tracking-tight leading-tight mb-8"
                 style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 200 }}>{s1.title}</h2>
               <div className="w-10 h-px bg-black/8 mb-6" />
-              <p className="text-sm text-black/50 font-light leading-relaxed mb-8 select-none" style={indentStyle}>{s1.desc}</p>
+              <p className="text-sm text-black/50 font-light leading-relaxed mb-8" style={indentStyle}>{s1.desc}</p>
               <ul className="space-y-2">
                 {s1.details.map((d) => <DetailItem key={d} d={d} />)}
               </ul>
@@ -175,10 +173,10 @@ export default function ServicesPage() {
             {/* Text */}
             <div className="lg:w-[44%]">
               <p className="text-[10px] text-[#007AFF]/45 tracking-[0.35em] font-medium mb-6 select-none">{s2.en}</p>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-[#1D1D1F] tracking-tight leading-tight mb-8 select-none"
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-[#1D1D1F] tracking-tight leading-tight mb-8"
                 style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 200 }}>{s2.title}</h2>
               <div className="w-10 h-px bg-black/8 mb-6" />
-              <p className="text-sm text-black/50 font-light leading-relaxed mb-8 select-none" style={indentStyle}>{s2.desc}</p>
+              <p className="text-sm text-black/50 font-light leading-relaxed mb-8" style={indentStyle}>{s2.desc}</p>
               <ul className="space-y-2">
                 {s2.details.map((d) => <DetailItem key={d} d={d} />)}
               </ul>
@@ -194,11 +192,11 @@ export default function ServicesPage() {
           <img src="/images/插页图.png" alt="" className="w-full h-auto block" draggable={false} />
         </div>
         <div className="text-center py-16 md:py-24">
-          <p className="text-black/40 text-lg md:text-xl font-light tracking-tight leading-relaxed select-none"
+          <p className="text-black/40 text-lg md:text-xl font-light tracking-tight leading-relaxed"
             style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>
             不值得信赖的防护<br />本身就是一种风险
           </p>
-          <p className="text-black/25 text-sm font-light tracking-[0.2em] mt-4 select-none"
+          <p className="text-black/25 text-sm font-light tracking-[0.2em] mt-4"
             style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>
             Trust is invisible until it fails
           </p>
@@ -211,21 +209,20 @@ export default function ServicesPage() {
           {/* Top — centered heading */}
           <div className="text-center mb-12 md:mb-20">
             <p className="text-[10px] text-[#007AFF]/45 tracking-[0.35em] font-medium mb-6 select-none">{s3.en}</p>
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-[#1D1D1F] tracking-tight leading-tight select-none"
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-[#1D1D1F] tracking-tight leading-tight"
               style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 200 }}>{s3.title}</h2>
             <div className="w-10 h-px bg-black/8 mx-auto mt-6 mb-8" />
-            <p className="text-sm text-black/40 font-light leading-relaxed max-w-xl mx-auto select-none">{s3.desc}</p>
+            <p className="text-sm text-black/40 font-light leading-relaxed max-w-xl mx-auto">{s3.desc}</p>
           </div>
 
           {/* Full-bleed image — capped height, frosted glass text badge */}
           <div className="w-screen relative left-1/2 -translate-x-1/2 mb-16 overflow-hidden" style={{ maxHeight: "72vh" }}>
             <img src="/images/系统集成.png" alt="" className="w-full h-full object-cover block" draggable={false} style={{ maxHeight: "72vh" }} />
             {/* Frosted glass pill with flowing color, links to contact */}
-            <style>{`@keyframes flow { 0%,100%{background-position:0% 50%} 50%{background-position:100% 50%} }`}</style>
-            <div className="absolute inset-0 flex items-center justify-center select-none" style={{ paddingTop: "2.5%" }}>
+            <div className="absolute inset-0 flex items-center justify-center" style={{ paddingTop: "2.5%" }}>
               <a href="/contact" className="relative px-6 py-2 bg-white/5 backdrop-blur-sm rounded-full text-white/50 tracking-[0.15em] overflow-hidden hover:bg-white/10 hover:text-white/70 transition-all duration-500"
                 style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 200, fontSize: "clamp(1.25rem, 3.5vw, 3rem)" }}>
-                <span className="absolute inset-0 bg-gradient-to-r from-[#007AFF]/12 via-[#6C5CE7]/12 to-[#007AFF]/12 bg-[length:200%_100%] animate-[flow_4s_ease-in-out_infinite] rounded-full" />
+                <span className="absolute inset-0 bg-gradient-to-r from-[#007AFF]/12 via-[#6C5CE7]/12 to-[#007AFF]/12 animate-flow rounded-full" />
                 <span className="relative z-10">RAYHO</span>
               </a>
             </div>
@@ -242,8 +239,8 @@ export default function ServicesPage() {
                     <div className="w-9 h-9 rounded-lg bg-[#007AFF]/6 flex items-center justify-center mx-auto mb-3">
                       <Icon className="w-[18px] h-[18px] text-[#007AFF]/50" strokeWidth={1.5} />
                     </div>
-                    <p className="text-sm text-black/55 font-light select-none mb-1.5 text-center">{item.label}</p>
-                    {item.desc && <p className="text-xs text-black/30 font-light leading-relaxed text-center select-none">{item.desc}</p>}
+                    <p className="text-sm text-black/55 font-light mb-1.5 text-center">{item.label}</p>
+                    {item.desc && <p className="text-xs text-black/30 font-light leading-relaxed text-center">{item.desc}</p>}
                   </div>
                 );
               });
@@ -259,71 +256,41 @@ export default function ServicesPage() {
           {/* Top — centered heading block */}
           <div className="text-center mb-20 md:mb-28">
             <p className="text-[10px] text-[#007AFF]/45 tracking-[0.35em] font-medium mb-6 select-none">{s4.en}</p>
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-[#1D1D1F] tracking-tight leading-tight select-none"
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-light text-[#1D1D1F] tracking-tight leading-tight"
               style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 200 }}>{s4.title}</h2>
             <div className="w-10 h-px bg-black/8 mx-auto mt-6 mb-8" />
-            <p className="text-sm text-black/45 font-light leading-relaxed max-w-xl mx-auto select-none">{s4.desc}</p>
+            <p className="text-sm text-black/45 font-light leading-relaxed max-w-xl mx-auto">{s4.desc}</p>
           </div>
 
-          {/* Four-step process — diagonal cascade, text tucked close to divider */}
-          <div className="hidden md:block relative" style={{ height: "1350px" }}>
-            {/* Vertical divider between left & right columns — ends at IMG 04 bottom */}
-            <div className="absolute top-0 left-1/2 w-px bg-black/[0.1]" style={{ transform: "translateX(-0.5px)", height: "1320px" }} />
-
-            {/* ── IMG 01 — left, top ── */}
-            <div className="absolute top-0 left-[3%] w-[44%] h-[300px] rounded-2xl overflow-hidden">
-              <img src="/images/process-01.png" alt="" className="w-full h-full object-cover opacity-90" draggable={false} />
-            </div>
-            {/* TEXT 01 — right, close to divider */}
-            <div className="absolute top-0 right-[3%] w-[44%]">
-              <p className="text-[10px] text-[#007AFF]/35 tracking-[0.25em] font-medium mb-2 select-none text-right">PHASE</p>
-              <span className="text-5xl lg:text-6xl text-[#007AFF]/25 select-none leading-none block text-right"
-                style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 200 }}>01</span>
-              <h3 className="text-xl lg:text-2xl font-light text-[#1D1D1F] mt-3 mb-3 select-none text-right"
-                style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>{s4.steps[0].title}</h3>
-              <p className="text-base text-black/45 font-light leading-relaxed select-none" style={{ textIndent: "2em" }}>{s4.steps[0].desc}</p>
-            </div>
-
-            {/* ── IMG 02 — right, cascades from IMG 01 bottom ── */}
-            <div className="absolute top-[340px] right-[3%] w-[44%] h-[300px] rounded-2xl overflow-hidden">
-              <img src="/images/process-02.png" alt="" className="w-full h-full object-cover opacity-90" draggable={false} />
-            </div>
-            {/* TEXT 02 — left, close to divider */}
-            <div className="absolute top-[360px] left-[3%] w-[44%]">
-              <p className="text-[10px] text-[#007AFF]/35 tracking-[0.25em] font-medium mb-2 select-none">PHASE</p>
-              <span className="text-5xl lg:text-6xl text-[#007AFF]/25 select-none leading-none block"
-                style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 200 }}>02</span>
-              <h3 className="text-xl lg:text-2xl font-light text-[#1D1D1F] mt-3 mb-3 select-none"
-                style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>{s4.steps[1].title}</h3>
-              <p className="text-base text-black/45 font-light leading-relaxed select-none" style={{ textIndent: "2em" }}>{s4.steps[1].desc}</p>
-            </div>
-
-            {/* ── IMG 03 — left, cascades from IMG 02 bottom ── */}
-            <div className="absolute top-[680px] left-[3%] w-[44%] h-[300px] rounded-2xl overflow-hidden">
-              <img src="/images/process-03.png" alt="" className="w-full h-full object-cover opacity-90" draggable={false} />
-            </div>
-            {/* TEXT 03 — right, close to divider */}
-            <div className="absolute top-[680px] right-[3%] w-[44%]">
-              <p className="text-[10px] text-[#007AFF]/35 tracking-[0.25em] font-medium mb-2 select-none text-right">PHASE</p>
-              <span className="text-5xl lg:text-6xl text-[#007AFF]/25 select-none leading-none block text-right"
-                style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 200 }}>03</span>
-              <h3 className="text-xl lg:text-2xl font-light text-[#1D1D1F] mt-3 mb-3 select-none text-right"
-                style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>{s4.steps[2].title}</h3>
-              <p className="text-base text-black/45 font-light leading-relaxed select-none" style={{ textIndent: "2em" }}>{s4.steps[2].desc}</p>
-            </div>
-
-            {/* ── IMG 04 — right, cascades from IMG 03 bottom ── */}
-            <div className="absolute top-[1020px] right-[3%] w-[44%] h-[300px] rounded-2xl overflow-hidden">
-              <img src="/images/process-04.png" alt="" className="w-full h-full object-cover opacity-90" draggable={false} />
-            </div>
-            {/* TEXT 04 — left, close to divider */}
-            <div className="absolute top-[1040px] left-[3%] w-[44%]">
-              <p className="text-[10px] text-[#007AFF]/35 tracking-[0.25em] font-medium mb-2 select-none">PHASE</p>
-              <span className="text-5xl lg:text-6xl text-[#007AFF]/25 select-none leading-none block"
-                style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 200 }}>04</span>
-              <h3 className="text-xl lg:text-2xl font-light text-[#1D1D1F] mt-3 mb-3 select-none"
-                style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>{s4.steps[3].title}</h3>
-              <p className="text-base text-black/45 font-light leading-relaxed select-none" style={{ textIndent: "2em" }}>{s4.steps[3].desc}</p>
+          {/* Four-step process */}
+          <div className="hidden md:block relative">
+            {/* Vertical divider */}
+            <div className="absolute top-0 bottom-0 left-1/2 w-px bg-black/[0.1] -translate-x-px" />
+            <div className="flex flex-col">
+              {s4.steps.map((step, idx) => {
+                const isLeft = idx % 2 === 0;
+                return (
+                  <div key={idx} className={`flex ${isLeft ? "" : "flex-row-reverse"} py-12 lg:py-16`}>
+                    {/* Image side */}
+                    <div className="w-[47%] shrink-0">
+                      <div className="aspect-[4/3] rounded-2xl overflow-hidden">
+                        <img src={`/images/process-0${idx + 1}.png`} alt="" className="w-full h-full object-cover opacity-90" draggable={false} />
+                      </div>
+                    </div>
+                    {/* Gap for divider */}
+                    <div className="w-[6%] shrink-0" />
+                    {/* Text side */}
+                    <div className="w-[47%] shrink-0 pt-4">
+                      <p className={`text-[10px] text-[#007AFF]/35 tracking-[0.25em] font-medium mb-2 ${isLeft ? "" : "text-right"}`}>PHASE</p>
+                      <span className={`text-5xl lg:text-6xl text-[#007AFF]/25 leading-none block ${isLeft ? "" : "text-right"}`}
+                        style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 200 }}>{(idx + 1).toString().padStart(2, "0")}</span>
+                      <h3 className={`text-xl lg:text-2xl font-light text-[#1D1D1F] mt-3 mb-3 ${isLeft ? "" : "text-right"}`}
+                        style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>{step.title}</h3>
+                      <p className={`text-base text-black/45 font-light leading-relaxed ${isLeft ? "" : "text-right"}`} style={{ textIndent: "2em" }}>{step.desc}</p>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
           {/* Mobile: single column */}
@@ -334,9 +301,9 @@ export default function ServicesPage() {
                   <img src={`/images/process-0${idx + 1}.png`} alt="" className="w-full h-full object-cover opacity-90" draggable={false} />
                 </div>
                 <div>
-                  <p className="text-[10px] text-[#007AFF]/30 tracking-[0.3em] font-medium mb-2 select-none">{(idx + 1).toString().padStart(2, "0")}</p>
-                  <h3 className="text-lg font-light text-[#1D1D1F] mb-2 select-none" style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>{step.title}</h3>
-                  <p className="text-sm text-black/45 font-light leading-relaxed select-none">{step.desc}</p>
+                  <p className="text-[10px] text-[#007AFF]/30 tracking-[0.3em] font-medium mb-2">{(idx + 1).toString().padStart(2, "0")}</p>
+                  <h3 className="text-lg font-light text-[#1D1D1F] mb-2" style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>{step.title}</h3>
+                  <p className="text-sm text-black/45 font-light leading-relaxed">{step.desc}</p>
                 </div>
               </div>
             ))}
@@ -349,21 +316,21 @@ export default function ServicesPage() {
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-[1440px] mx-auto px-8 lg:px-16">
           <div className="max-w-xl mx-auto text-center">
-            <p className="text-black/55 text-base md:text-lg font-light tracking-tight leading-relaxed select-none"
+            <p className="text-black/55 text-base md:text-lg font-light tracking-tight leading-relaxed"
               style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>
               每个实验室都有自己的性格，<br />我们负责让它不被辜负。
             </p>
-            <p className="text-black/25 text-xs font-light tracking-[0.15em] mt-4 mb-16 select-none"
+            <p className="text-black/25 text-xs font-light tracking-[0.15em] mt-4 mb-16"
               style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>
               Every lab has its own character. We make sure it stays true.
             </p>
-            <p className="text-black/20 text-xs font-light tracking-[0.2em] select-none"
+            <p className="text-black/20 text-xs font-light tracking-[0.2em]"
               style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>
               Ready to start?
             </p>
             <a
               href="/contact"
-              className="inline-flex items-center gap-3 mt-5 px-10 py-3.5 bg-[#1D1D1F] text-white text-sm tracking-[0.1em] font-medium rounded-full hover:bg-[#007AFF] transition-all duration-500 select-none"
+              className="inline-flex items-center gap-3 mt-5 px-10 py-3.5 bg-[#1D1D1F] text-white text-sm tracking-[0.1em] font-medium rounded-full hover:bg-[#007AFF] transition-all duration-500"
             >
               预约咨询
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

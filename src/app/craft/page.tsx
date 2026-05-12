@@ -30,7 +30,7 @@ export default function CraftPage() {
           disablePictureInPicture disableRemotePlayback
           controlsList="nodownload nofullscreen"
           onContextMenu={(e) => e.preventDefault()}
-          className="absolute inset-0 w-full h-full object-cover select-none"
+          className="absolute inset-0 w-full h-full object-cover"
           poster="/images/showcase/02.png"
           onLoadedData={() => { videoRef.current?.play().catch(() => {}); }}
         >
@@ -41,7 +41,7 @@ export default function CraftPage() {
 
         <div className={`absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-6 transition-all duration-[2000ms] ease-out ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
           <p className="text-[#007AFF]/60 text-[9px] tracking-[0.35em] font-medium mb-8 select-none">THE CRAFT</p>
-          <h1 className="text-white font-light tracking-[0.05em] leading-tight text-3xl md:text-5xl lg:text-6xl max-w-2xl select-none"
+          <h1 className="text-white font-light tracking-[0.05em] leading-tight text-3xl md:text-5xl lg:text-6xl max-w-2xl"
             style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 200 }}>
             安静地做好<br />骄傲地<span className="font-bold">展示</span>
           </h1>
@@ -58,7 +58,7 @@ export default function CraftPage() {
         <div className="max-w-[1440px] mx-auto px-8 lg:px-16">
           <div className="text-center mb-24 md:mb-32">
             <p className="text-[#007AFF]/40 text-[9px] tracking-[0.3em] font-medium mb-8 select-none">IN MOTION</p>
-            <h2 className="text-2xl md:text-3xl font-light text-white tracking-tight leading-tight select-none"
+            <h2 className="text-2xl md:text-3xl font-light text-white tracking-tight leading-tight"
               style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>
               走进<span className="font-bold">制造</span>，眼见<span className="font-bold">为实</span>
             </h2>
@@ -69,22 +69,22 @@ export default function CraftPage() {
               { title: "通风柜生产车间", desc: "精密钣金生产线，全自动激光切割", img: "/images/showcase/01.png" },
               { title: "实验台组装线", desc: "模块化拼装工艺，严苛的出厂检测", img: "/images/showcase/02.png" },
               { title: "风管预制工厂", desc: "洁净风管自动焊接，气密性逐根测试", img: "/images/showcase/03.png" },
-              { title: "成品检验中心", desc: "ISO标准检测流程，每一件产品都有档案", img: "/images/showcase/01.png" },
+              { title: "成品检验中心", desc: "ISO标准检测流程，每一件产品都有档案", img: "/images/showcase/04.png" },
             ].map((item, i) => (
               <div key={i} className="group block bg-black/50 overflow-hidden hover:bg-black/60 transition-all duration-700">
                 <div className="relative aspect-[16/9] overflow-hidden">
                   <img src={item.img} alt="" className="w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-[1.02] transition-all duration-[1500ms] ease-out" />
                 </div>
                 <div className="p-10 md:p-14">
-                  <h3 className="text-lg md:text-xl font-bold text-white/80 select-none mb-2">{item.title}</h3>
-                  <p className="text-sm text-white/25 font-light select-none">{item.desc}</p>
+                  <h3 className="text-lg md:text-xl font-bold text-white/80 mb-2">{item.title}</h3>
+                  <p className="text-sm text-white/25 font-light">{item.desc}</p>
                 </div>
               </div>
             ))}
           </div>
 
           <div className="mt-32 text-center">
-            <p className="text-white/15 text-sm font-light tracking-[0.15em] select-none">
+            <p className="text-white/15 text-sm font-light tracking-[0.15em]">
               更多内容，敬请期待
             </p>
           </div>

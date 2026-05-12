@@ -3,16 +3,16 @@ export default function AboutPage() {
     <>
       {/* ═══════ Hero — Full-bleed ═══════ */}
       <section className="relative bg-white overflow-hidden" style={{ height: "100vh" }}>
-        <img src="/images/关于hero.png" alt="" className="absolute inset-0 w-full h-full object-cover" style={{ transform: "scaleX(-1)", filter: "saturate(0.85) hue-rotate(-8deg)" }} draggable={false} />
+        <img src="/images/关于hero.png" alt="瑞辉筑业实验室项目展示" className="absolute inset-0 w-full h-full object-cover" style={{ transform: "scaleX(-1)", filter: "saturate(0.85) hue-rotate(-8deg)" }} draggable={false} />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/[0.02]" />
         <div className="relative z-10 h-full flex items-end pb-16 md:pb-24">
           <div className="max-w-[1440px] mx-auto px-8 lg:px-16 w-full">
             <p className="text-white/60 text-[9px] tracking-[0.3em] font-medium mb-8 select-none">FOCUSED</p>
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-light text-white tracking-tight leading-tight max-w-3xl select-none drop-shadow-[0_2px_12px_rgba(0,0,0,0.3)]"
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-light text-white tracking-tight leading-tight max-w-3xl drop-shadow-[0_2px_12px_rgba(0,0,0,0.3)]"
               style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>
               把<span className="font-bold">热情</span>，<br />写进每一个<span className="font-bold">实验室</span>
             </h1>
-            <p className="text-white/50 text-sm font-light mt-6 select-none leading-relaxed drop-shadow-[0_1px_6px_rgba(0,0,0,0.3)]">
+            <p className="text-white/50 text-sm font-light mt-6 leading-relaxed drop-shadow-[0_1px_6px_rgba(0,0,0,0.3)]">
               热爱这件事，已经很久了
             </p>
           </div>
@@ -21,7 +21,7 @@ export default function AboutPage() {
 
       {/* ═══════ 关于我们 + Philosophy + 加入我们 ═══════ */}
       <div className="relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none select-none flex items-center z-40" style={{ justifyContent: "flex-end", paddingRight: "max(1rem, calc((100vw - 920px) / 2 - 4rem))" }}>
+        <div className="absolute inset-0 pointer-events-none flex items-center z-40" style={{ justifyContent: "flex-end", paddingRight: "max(1rem, calc((100vw - 920px) / 2 - 4rem))" }}>
           <span className="text-black/[0.12] font-bold tracking-[0.1em]"
             style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', writingMode: "vertical-rl", fontSize: "clamp(4rem, 12vw, 10rem)", lineHeight: 0.8 }}>RAYHO</span>
         </div>
@@ -29,7 +29,7 @@ export default function AboutPage() {
       <section className="pt-24 md:pt-32 pb-0 bg-white">
         <div className="max-w-2xl mx-auto px-8 lg:px-16 text-center">
           <div className="w-8 h-px bg-black/[0.12] mx-auto mb-8" />
-          <p className="text-black/50 text-2xl md:text-3xl font-light tracking-tight select-none"
+          <p className="text-black/50 text-2xl md:text-3xl font-light tracking-tight"
             style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>
             关于我们
           </p>
@@ -43,7 +43,7 @@ export default function AboutPage() {
           <div className="flex gap-0" style={{ maxWidth: "900px", margin: "0 auto" }}>
             <div className="w-full lg:w-[50%]">
               <div className="w-fit">
-                <p className="text-black/55 text-base md:text-lg font-light leading-relaxed select-none"
+                <p className="text-black/55 text-base md:text-lg font-light leading-relaxed"
                   style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>
                   <span className="font-bold text-black/60">我们</span><span className="text-sm md:text-base">做的不是标准产品。<br />
                   每一间实验室，都是先理解研究本身，再考虑空间。<br />
@@ -53,7 +53,7 @@ export default function AboutPage() {
               </div>
               <div className="w-16 h-px bg-black/[0.08] my-12" />
               <div className="w-fit">
-                <p className="text-black/45 text-sm md:text-base font-light leading-relaxed select-none"
+                <p className="text-black/45 text-sm md:text-base font-light leading-relaxed"
                   style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>
                   八年了，我们学会一件事——<br />
                   实验室不是建出来的，是一点一点磨出来的。<br />
@@ -63,7 +63,7 @@ export default function AboutPage() {
               </div>
               <div className="w-16 h-px bg-black/[0.08] my-12" />
               <div className="w-fit">
-                <p className="text-black/35 text-sm md:text-base font-light leading-relaxed select-none"
+                <p className="text-black/35 text-sm md:text-base font-light leading-relaxed"
                   style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>
                   好的实验室该是什么样？<br />
                   不是好看，是好用。<br />
@@ -73,7 +73,7 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="hidden lg:block relative self-stretch" style={{ width: "50%" }}>
-              <img src="/images/光影.png" alt="" className="absolute inset-0 w-full h-full object-cover select-none" draggable={false} />
+              <img src="/images/光影.png" alt="" className="absolute inset-0 w-full h-full object-cover" draggable={false} />
             </div>
           </div>
         </div>
@@ -83,25 +83,25 @@ export default function AboutPage() {
       <section className="bg-white" style={{ height: "70vh", maxHeight: "600px" }}>
         <div className="flex h-full">
           <div className="flex-1 relative overflow-hidden">
-            <img src="/images/插图2.png" alt="" className="absolute inset-0 w-full h-full object-cover" draggable={false} />
+            <img src="/images/插图2.png" alt="瑞辉筑业团队" className="absolute inset-0 w-full h-full object-cover" draggable={false} />
           </div>
           <div className="w-72 md:w-80 lg:w-96 flex items-center px-8 md:px-12">
             <div>
               <div className="w-8 h-px bg-black/[0.12] mb-10 -mt-20" />
-            <p className="text-black/40 text-lg md:text-xl font-light tracking-tight mb-3 select-none"
+            <p className="text-black/40 text-lg md:text-xl font-light tracking-tight mb-3"
                 style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>
                 加入我们
               </p>
               <p className="text-[#007AFF]/35 text-[10px] tracking-[0.3em] font-medium mb-8 select-none">JOIN US</p>
-              <p className="text-black/55 text-base md:text-lg leading-relaxed select-none"
+              <p className="text-black/55 text-base md:text-lg leading-relaxed"
                 style={{ fontFamily: '"Songti SC", "STSong", "Noto Serif SC", serif' }}>
                 我们相信好的东西都是安静的。
               </p>
-              <p className="text-black/45 text-sm md:text-base font-light mt-6 leading-relaxed select-none"
+              <p className="text-black/45 text-sm md:text-base font-light mt-6 leading-relaxed"
                 style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>
                 如果你也愿意把一件小事做好——<br />来坐坐。
               </p>
-              <p className="text-black/45 text-sm font-light tracking-[0.15em] mt-8 select-none inline-flex items-center gap-2 px-4 py-2 border border-black/8 rounded-full"
+              <p className="text-black/45 text-sm font-light tracking-[0.15em] mt-8 inline-flex items-center gap-2 px-4 py-2 border border-black/[0.08] rounded-full"
                 style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>
                 <svg className="w-3.5 h-3.5 text-black/25" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -118,31 +118,31 @@ export default function AboutPage() {
       {/* ═══════ CTA ═══════ */}
       <section className="py-32 md:py-44 bg-white">
         <div className="max-w-3xl mx-auto px-8 lg:px-16 text-center">
-          <p className="text-black/40 text-base md:text-lg font-light tracking-tight leading-relaxed select-none"
+          <p className="text-black/40 text-base md:text-lg font-light tracking-tight leading-relaxed"
             style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>
             好的设计，<br />就是消失的设计
           </p>
-          <p className="text-black/20 text-xs font-light tracking-[0.2em] mt-8 mb-16 select-none"
+          <p className="text-black/20 text-xs font-light tracking-[0.2em] mt-8 mb-16"
             style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>
             Good design is invisible
           </p>
           <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-4 mx-auto mb-20 opacity-80 select-none">
-            <img src="/images/合作单位/北京大学.jpg" alt="" className="h-16 w-auto" draggable={false} />
-            <img src="/images/合作单位/清华大学.jpg" alt="" className="h-16 w-auto" draggable={false} />
-            <img src="/images/合作单位/中国地质科学院.jpg" alt="" className="h-16 w-auto" draggable={false} />
-            <img src="/images/合作单位/中科院物理研究所.jpg" alt="" className="h-16 w-auto" draggable={false} />
-            <img src="/images/合作单位/国家电网.jpg" alt="" className="h-16 w-auto" draggable={false} />
-            <img src="/images/合作单位/航空航天.jpg" alt="" className="h-16 w-auto" draggable={false} />
-            <img src="/images/合作单位/北京科技大学.jpg" alt="" className="h-16 w-auto" draggable={false} />
-            <img src="/images/合作单位/中国农业大学.jpg" alt="" className="h-16 w-auto" draggable={false} />
-            <img src="/images/合作单位/检验检疫.jpg" alt="" className="h-16 w-auto" draggable={false} />
-            <img src="/images/合作单位/中国长江三峡集团公司.jpg" alt="" className="h-16 w-auto" draggable={false} />
-            <img src="/images/合作单位/大禹节水集团股份有限公司.jpg" alt="" className="h-16 w-auto" draggable={false} />
-            <img src="/images/合作单位/交通运输部天津水运工程科学研究院.jpg" alt="" className="h-16 w-auto" draggable={false} />
+            <img src="/images/合作单位/北京大学.jpg" alt="北京大学" className="h-16 w-auto" draggable={false} />
+            <img src="/images/合作单位/清华大学.jpg" alt="清华大学" className="h-16 w-auto" draggable={false} />
+            <img src="/images/合作单位/中国地质科学院.jpg" alt="中国地质科学院" className="h-16 w-auto" draggable={false} />
+            <img src="/images/合作单位/中科院物理研究所.jpg" alt="中科院物理研究所" className="h-16 w-auto" draggable={false} />
+            <img src="/images/合作单位/国家电网.jpg" alt="国家电网" className="h-16 w-auto" draggable={false} />
+            <img src="/images/合作单位/航空航天.jpg" alt="航空航天" className="h-16 w-auto" draggable={false} />
+            <img src="/images/合作单位/北京科技大学.jpg" alt="北京科技大学" className="h-16 w-auto" draggable={false} />
+            <img src="/images/合作单位/中国农业大学.jpg" alt="中国农业大学" className="h-16 w-auto" draggable={false} />
+            <img src="/images/合作单位/检验检疫.jpg" alt="检验检疫" className="h-16 w-auto" draggable={false} />
+            <img src="/images/合作单位/中国长江三峡集团公司.jpg" alt="中国长江三峡集团公司" className="h-16 w-auto" draggable={false} />
+            <img src="/images/合作单位/大禹节水集团股份有限公司.jpg" alt="大禹节水集团股份有限公司" className="h-16 w-auto" draggable={false} />
+            <img src="/images/合作单位/交通运输部天津水运工程科学研究院.jpg" alt="交通运输部天津水运工程科学研究院" className="h-16 w-auto" draggable={false} />
           </div>
           <a
             href="/contact"
-            className="inline-flex items-center gap-3 px-10 py-3.5 bg-[#1D1D1F] text-white text-sm tracking-[0.1em] font-medium rounded-full hover:bg-[#007AFF] transition-all duration-500 select-none"
+            className="inline-flex items-center gap-3 px-10 py-3.5 bg-[#1D1D1F] text-white text-sm tracking-[0.1em] font-medium rounded-full hover:bg-[#007AFF] transition-all duration-500"
           >
             预约咨询
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
