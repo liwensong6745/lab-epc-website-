@@ -67,7 +67,7 @@ export default function HeroSection() {
         onContextMenu={(e) => e.preventDefault()}
         className="absolute inset-0 w-full h-full md:h-[110%] object-cover select-none"
         style={{ transform: `translateY(${videoY}px)` }}
-        poster="/images/showcase/加载图片.PNG"
+        poster="/images/加载图片.PNG"
         onLoadedData={() => {
           videoRef.current?.play().catch(() => {});
         }}
