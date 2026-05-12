@@ -32,7 +32,7 @@ export default function Header() {
         className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
           scrolled
             ? "bg-white/90 backdrop-blur-xl shadow-[0_1px_0_rgba(0,0,0,0.06)]"
-            : "bg-white/90 backdrop-blur-xl lg:bg-transparent lg:hover:bg-white/90 lg:hover:backdrop-blur-xl lg:hover:shadow-[0_1px_0_rgba(0,0,0,0.06)]"
+            : "bg-white/15 backdrop-blur-md"
         }`}
       >
         <div className="max-w-[1440px] mx-auto px-8 lg:px-16">
