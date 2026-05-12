@@ -34,7 +34,23 @@ export default function HeroSection() {
     const play = () => { video.play().catch(() => {}); };
     const events = ["touchstart", "click", "scroll"];
     events.forEach((e) => document.addEventListener(e, play, { once: true }));
-    return () => events.forEach((e) => document.removeEventListener(e, play));
+
+    // Skip first ~1.5s (Luma reference frame)
+    const skipStart = () => {
+      if (video.currentTime < 1.5) video.currentTime = 1.5;
+    };
+    video.addEventListener("loadeddata", skipStart, { once: true });
+    video.addEventListener("seeking", () => {
+      if (video.currentTime < 1.5) video.currentTime = 1.5;
+    });
+    video.addEventListener("timeupdate", () => {
+      if (video.currentTime < 1.5) video.currentTime = 1.5;
+    });
+
+    return () => {
+      events.forEach((e) => document.removeEventListener(e, play));
+      video.removeEventListener("loadeddata", skipStart);
+    };
   }, []);
 
   return (
@@ -51,12 +67,12 @@ export default function HeroSection() {
         onContextMenu={(e) => e.preventDefault()}
         className="absolute inset-0 w-full h-full md:h-[110%] object-cover select-none"
         style={{ transform: `translateY(${videoY}px)` }}
-        poster="/images/showcase/01.png"
+        poster="/images/showcase/加载图片.PNG"
         onLoadedData={() => {
           videoRef.current?.play().catch(() => {});
         }}
       >
-        <source src="/video/hero-bg.mp4" type="video/mp4" />
+        <source src="/video/hero-bg.mp4#t=1.5" type="video/mp4" />
       </video>
 
       {/* Subtle dark overlay for text readability */}

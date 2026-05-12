@@ -33,7 +33,7 @@ export default function TrustBar() {
           videoRef.current?.play().catch(() => {});
         }}
       >
-        <source src="/video/hero-bg.mp4" type="video/mp4" />
+        <source src="/video/TrustBar.mp4" type="video/mp4" />
       </video>
 
       {/* Overlay */}
