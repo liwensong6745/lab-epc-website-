@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import FumeHoodFan from "@/components/services/FumeHoodFan";
 import { LuWrench, LuDroplet, LuRecycle, LuWind } from "react-icons/lu";
+
+export const metadata: Metadata = {
+  title: "解决方案 | RayHo 瑞辉筑业",
+  description: "实验室家具系统、通风柜与安全、实验室基础配套、因需而变——模块化实验室家具与系统集成，精密制造，从台面到管路",
+};
 
 /* ── Inline icon helper (mirrors MagazineSpread) ── */
 function IconFor({ label }: { label: string }) {

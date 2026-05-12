@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "关于瑞辉 | RayHo 瑞辉筑业",
+  description: "北京瑞辉筑业实验室科技有限公司，十五年专注实验室工程，从设计到交付，为超过200个实验室提供整体解决方案",
+};
+
 export default function AboutPage() {
   return (
     <>
