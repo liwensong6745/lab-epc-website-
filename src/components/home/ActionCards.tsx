@@ -2,25 +2,14 @@ import Link from "next/link";
 
 const cards = [
   {
-    en: "Durable",
-    title: "产品中心",
-    desc: "模块化实验室家具系统",
+    en: "Solutions",
+    title: "解决方案",
+    desc: "每一个细节，都经得起审视",
     href: "/services",
     borderColor: "#007AFF",
     blobs: [
       { color: "rgba(0,122,255,0.22)", delay: "0s", top: "-10%", left: "-15%" },
       { color: "rgba(6,182,212,0.14)", delay: "2s", top: "25%", left: "20%" },
-    ],
-  },
-  {
-    en: "The Proof",
-    title: "项目实证",
-    desc: "每一次交付都是作品",
-    href: "/cases",
-    borderColor: "#F59E0B",
-    blobs: [
-      { color: "rgba(245,158,11,0.16)", delay: "1s", top: "-10%", left: "-15%" },
-      { color: "rgba(0,122,255,0.12)", delay: "3s", top: "25%", left: "20%" },
     ],
   },
   {
@@ -35,10 +24,21 @@ const cards = [
     ],
   },
   {
-    en: "Focused",
-    title: "关于瑞辉",
+    en: "About",
+    title: "关于我们",
     desc: "把热情，写进每一个实验室",
     href: "/about",
+    borderColor: "#F59E0B",
+    blobs: [
+      { color: "rgba(245,158,11,0.16)", delay: "1s", top: "-10%", left: "-15%" },
+      { color: "rgba(0,122,255,0.12)", delay: "3s", top: "25%", left: "20%" },
+    ],
+  },
+  {
+    en: "Contact",
+    title: "联系我们",
+    desc: "告诉我们需求，剩下的交给我们",
+    href: "/contact",
     borderColor: "#8B5CF6",
     blobs: [
       { color: "rgba(139,92,246,0.18)", delay: "1.5s", top: "-10%", left: "-15%" },
@@ -56,13 +56,13 @@ function CardIcon({ en }: { en: string }) {
   );
 
   switch (en) {
-    case "Durable":
+    case "Solutions":
       return icon(<><rect x="4" y="4" width="16" height="3" rx="1" /><rect x="4" y="10" width="16" height="3" rx="1" /><rect x="4" y="16" width="16" height="3" rx="1" /></>);
-    case "The Proof":
+    case "About":
       return icon(<><path d="M9 12l2 2 4-4" /><rect x="4" y="3" width="16" height="18" rx="2" /></>);
     case "The Craft":
       return icon(<><path d="M12 2L3 7v5c0 6 4 10 9 12 5-2 9-6 9-12V7l-9-5z" /><polyline points="8 12 11 15 16 9" /></>);
-    case "Focused":
+    case "Contact":
       return icon(<><circle cx="12" cy="12" r="9" /><path d="M12 2v4m0 12v4M2 12h4m12 0h4" /><circle cx="12" cy="12" r="3" /></>);
     default:
       return icon(<circle cx="12" cy="12" r="4" />);

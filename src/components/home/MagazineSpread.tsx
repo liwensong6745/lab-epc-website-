@@ -12,10 +12,10 @@ function IconFor({ label }: { label: string }) {
     case "补风": return icon(<><circle cx="12" cy="12" r="9" /><path d="M12 3a3 6 0 100 12" /><path d="M12 9a3 6 0 100 12" /></>);
     case "安全": return icon(<><path d="M12 2L3 7v5c0 6 4 10 9 12 5-2 9-6 9-12V7l-9-5z" /><polyline points="8 12 11 15 16 9" /></>);
     case "材质": return icon(<><rect x="4" y="4" width="16" height="16" rx="2" /><line x1="4" y1="10" x2="20" y2="10" /><path d="M8 10V4" /><path d="M16 10V4" /></>);
-    case "规划设计": return icon(<><circle cx="12" cy="12" r="9" /><path d="M12 2v4m0 12v4M2 12h4m12 0h4" /><circle cx="12" cy="12" r="3" /></>);
-    case "BIM 协同": return icon(<><rect x="4" y="8" width="16" height="12" rx="1" /><polyline points="8 8 12 4 16 8" /><line x1="12" y1="12" x2="12" y2="16" /><circle cx="12" cy="17" r="0.5" fill="currentColor" /></>);
-    case "工程交付": return icon(<><path d="M9 12l2 2 4-4" /><rect x="4" y="3" width="16" height="18" rx="2" /></>);
-    case "机电系统": return icon(<><circle cx="12" cy="12" r="3" /><path d="M12 1v3m0 16v3M1 12h3m16 0h3M5.6 5.6l2.1 2.1m8.6 8.6l2.1 2.1M5.6 18.4l2.1-2.1m8.6-8.6l2.1-2.1" /></>);
+    case "前期调研": return icon(<><circle cx="12" cy="12" r="9" /><path d="M12 2v4m0 12v4M2 12h4m12 0h4" /><circle cx="12" cy="12" r="3" /></>);
+    case "数字推演": return icon(<><rect x="4" y="8" width="16" height="12" rx="1" /><polyline points="8 8 12 4 16 8" /><line x1="12" y1="12" x2="12" y2="16" /><circle cx="12" cy="17" r="0.5" fill="currentColor" /></>);
+    case "项目执行": return icon(<><path d="M9 12l2 2 4-4" /><rect x="4" y="3" width="16" height="18" rx="2" /></>);
+    case "实验配套": return icon(<><circle cx="12" cy="12" r="3" /><path d="M12 1v3m0 16v3M1 12h3m16 0h3M5.6 5.6l2.1 2.1m8.6 8.6l2.1 2.1M5.6 18.4l2.1-2.1m8.6-8.6l2.1-2.1" /></>);
     case "标准保障": return icon(<><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z" /><polyline points="14 2 14 8 20 8" /><line x1="8" y1="13" x2="16" y2="13" /><line x1="8" y1="17" x2="12" y2="17" /></>);
     default: return icon(<circle cx="12" cy="12" r="4" />);
   }
@@ -49,13 +49,13 @@ const indentStyle = { textIndent: "2em" };
 const s1 = {
   en: "The Craft",
   title: <>把<span className="font-bold">简单</span>的事，<br />做到<span className="font-bold">无可挑剔</span></>,
-  desc: "好的东西有一种安静的气质。台面的触感是温润的，抽屉推回去的阻尼刚好，焊缝摸上去像是长在一起的。这些感受，来自一些你看不到的坚持——陶瓷台面在液氮和高温之间反复冲击，理化板在浓酸里一泡就是几天，钢框架在炉子里缓慢降温，让应力一点一点释放干净。不是标准要求，是十五年做同一件事教会了我们分寸。这些没什么好炫耀的，但它们安静地待在那里，十年后依然可靠。",
+  desc: "好的东西有一种安静的气质。台面的触感是温润的，抽屉推回去的阻尼刚好，焊缝摸上去像是长在一起的。这些感受，来自一些你看不到的坚持——不是更高的标准，是判断。不是更贵的材料，是分寸。一放下去，就在那里，十年过去了还靠得住。",
   details: [
-    "台面 | 陶瓷、理化板、环氧树脂，全系通过 SEFA 8M 认证",
-    "框架 | 1.2mm 冷轧钢板 · 焊后整体热处理 · 静电环氧粉末喷涂",
+    "台面 | 陶瓷、理化板、环氧树脂，全系通过检测认证",
+    "框架 | 1.0–1.2mm 冷轧钢板 · 整体热处理 · 静电环氧粉末喷涂",
     "承重 | 中央台面设计荷载 ≥ 400kg/m²，仪器台 ≥ 600kg/m²",
     "精度 | 数控冲裁 ±0.1mm · 折弯角度偏差 ≤ 0.5° · 焊道余高 ≤ 0.3mm",
-    "防腐 | 环氧涂层盐雾测试 ≥ 1000h，耐 37% 盐酸 72h 接触无变化",
+    "防腐 | 盐雾测试 ≥ 200h，耐 37% 盐酸 72h 无变化",
   ],
   img: "/images/图1-1.png",
   img2: "/images/图1-2.png",
@@ -67,8 +67,8 @@ const s2 = {
   title: <>最<span className="font-bold">好</span>的保护，<br />是你<span className="font-bold">感觉不到</span>它的存在</>,
   desc: "一个通风柜在工作时，你几乎听不到声音。调节门滑过指尖的力度不轻不重，气流稳定到让你忘了它正在以每秒数百升的速度替换着空气。这份不动声色，是因为每 0.1 秒有一次采样、变频器在实时修正转速、补风系统在操作口前方织着一道看不见的气幕。真正可靠的东西往往就是这样——不响、不亮、不弹通知，但断电那一刻自动切备用回路，风机故障三秒接管。它不发一言，但每个深夜都在说同一句话：我在。",
   details: [
-    "气流 | 面风速 0.3–0.5m/s 自适应，通过 ASHRAE 110-2016 & EN 14175-3 双标",
-    "控制 | 0.1s 采样周期 · 红外位移传感器 · VAV 变频调速 · 排风柜面风速实时显示",
+    "气流 | 面风速 0.3–0.5m/s 自适应，通过 ASHRAE 110-2016 & EN 14175-3",
+    "控制 | 红外位移传感器 · VAV 变频调速 · 排风柜面风速实时显示",
     "补风 | 主动式气幕设计 · 补风角度可调 · 避免操作口紊流与交叉污染",
     "安全 | 双路独立供电 · 应急排风 3s 接管 · 调节门限高锁定 · 防坠落钢丝绳",
     "材质 | 1.2mm 冷轧钢柜体 · SEFA 级环氧喷涂 · 导流板可拆卸清洗",
@@ -79,13 +79,13 @@ const s2 = {
 const s3 = {
   en: "End to End",
   title: <>你只管<span className="font-bold">科研</span>，<br />剩下的<span className="font-bold">交给我们</span></>,
-  desc: "每个实验室动工之前，我们会先去看——不是看墙，是看人。上午的阳光从哪扇窗进来，研究员取试剂的习惯高度，走廊的推车几点经过。这些不会写进招标文件，但会写进我们的第一根线。画的第一张图不是平面，是动线：样品怎么进来，废弃物怎么出去，人从工位到通风柜要走几步。空间跟着动线长出来，不是反过来的。两百多个项目，没有一个重复——因为每个实验室的科研不一样，形态就不该一样。",
+  desc: "每个实验室开始前，先摸清实验流程、研究员的工作习惯。试剂瓶放在哪个高度、走廊推车几点经过。这些不会写进招标文件，但会写进我们的第一笔。画的第一张图不是平面，是动线：样品怎么进来，废弃物怎么出去，人从工位到通风柜要走几步。没有一个是重复的——因为科研不同，形态就该不同。",
   details: [
-    "规划设计 | 工艺调研先行 · 三维全专业协同 · 管线综合碰撞检查 · 预留增容接口",
-    "BIM 协同 | Revit 全专业模型 · Navisworks 碰撞检测 · 施工前完成管线排布优化",
-    "工程交付 | 自有施工团队 · 项目经理驻场 · 分阶段验收 · 竣工模型归档",
-    "机电系统 | 高纯气体管路 · 中央纯水/超纯水 · 废水处理 · 洁净空调 · 楼宇自控",
-    "标准保障 | GB 50346 · GB 50472 · ISO 14644 · SEFA · ASHRAE · 十年备件承诺",
+    "前期调研 | 工艺调研先行 · 三维全专业协同 · 管线综合碰撞检查 · 预留增容接口",
+    "数字推演 | Revit 全专业模型 · Navisworks 碰撞检测 · 管线排布优化",
+    "项目执行 | 现场统筹 · 进度管控 · 节点验收 · 数字归档",
+    "实验配套 | 高纯气体管路 · 中央纯水/超纯水 · 废水处理 · 洁净空调 · 楼宇自控",
+    "标准保障 | GB 50346 · GB 50472 · ISO 14644 · SEFA · ASHRAE",
   ],
   img: "/images/图3.png",
 };
@@ -149,7 +149,7 @@ export default function MagazineSpread() {
             </div>
 
             {/* Image — offset right */}
-            <div className="lg:w-[54%] lg:ml-auto lg:aspect-[4/5] overflow-hidden rounded-2xl">
+            <div className="lg:w-[54%] lg:ml-auto lg:mt-20 lg:aspect-[4/5] overflow-hidden rounded-2xl">
               <img src={s2.img} alt="" className="w-full h-auto lg:h-full lg:object-contain block opacity-90" draggable={false} />
             </div>
           </div>
@@ -161,7 +161,7 @@ export default function MagazineSpread() {
         <div className="max-w-[1600px] mx-auto px-8 lg:px-20 py-32 md:py-48">
           <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 lg:items-center">
 
-            <div className="lg:w-[58%] lg:aspect-[4/5]">
+            <div className="lg:w-[58%] lg:mt-20 lg:aspect-[4/5]">
               <img src={s3.img} alt="" className="w-full h-auto lg:h-full lg:object-contain block rounded-2xl opacity-90" draggable={false} />
             </div>
 

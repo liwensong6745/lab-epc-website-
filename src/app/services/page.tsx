@@ -18,6 +18,9 @@ function IconFor({ label }: { label: string }) {
     case "精度": return icon(<><circle cx="12" cy="12" r="8" /><circle cx="12" cy="12" r="3" /><line x1="12" y1="2" x2="12" y2="6" /><line x1="12" y1="18" x2="12" y2="22" /><line x1="2" y1="12" x2="6" y2="12" /><line x1="18" y1="12" x2="22" y2="12" /></>);
     case "防腐": return icon(<><path d="M12 2L4 7v5c0 5.25 3.5 10 8 11.5 4.5-1.5 8-6.25 8-11.5V7l-8-5z" /><line x1="9" y1="12" x2="15" y2="12" /></>);
     case "安全": return icon(<><path d="M12 2L3 7v5c0 6 4 10 9 12 5-2 9-6 9-12V7l-9-5z" /><polyline points="8 12 11 15 16 9" /></>);
+    case "气流": return icon(<><path d="M2 12h4l2-6 4 14 2-8h4" /></>);
+    case "控制": return icon(<><line x1="4" y1="21" x2="4" y2="14" /><line x1="4" y1="10" x2="4" y2="3" /><line x1="12" y1="21" x2="12" y2="12" /><line x1="12" y1="8" x2="12" y2="3" /><line x1="20" y1="21" x2="20" y2="16" /><line x1="20" y1="12" x2="20" y2="3" /><circle cx="4" cy="12" r="2" /><circle cx="12" cy="10" r="2" /><circle cx="20" cy="14" r="2" /></>);
+    case "补风": return icon(<><circle cx="12" cy="12" r="9" /><path d="M12 3a3 6 0 100 12" /><path d="M12 9a3 6 0 100 12" /></>);
     default: return icon(<circle cx="12" cy="12" r="4" />);
   }
 }
@@ -62,13 +65,13 @@ const indentStyle = { textIndent: "2em" };
 const s1 = {
   en: "Precision Lab Furniture",
   title: "实验室家具系统",
-  desc: "十五年前我们开始做实验室家具的时候，没有人觉得一张台面值得认真对待。但好的东西有一种安静的气质——台面的触感是温润的，抽屉推回去的阻尼刚好，焊缝摸上去像是长在一起的。这些感受来自一些你看不到的坚持：陶瓷台面在液氮与高温之间反复冲击，理化板在浓酸里一泡就是几天，钢框架在炉子里缓慢退火，让应力一点一点释放干净。不是标准要求，是十五年做同一件事教会了我们分寸。它们安静地待在那里，十年后依然可靠。",
+  desc: "一张台面，没人注意。直到你摸上去——温润、细腻、刚刚好的阻尼，焊缝像长出来一样。好的东西是这样，不在你眼里，在你指尖上。这些感受来自一些你看不到的坚持：陶瓷台面在液氮与高温之间反复冲击，理化板在浓酸里一泡就是几天，钢框架在炉子里缓慢退火，让应力一点一点释放干净。不是标准要求，是判断，是分寸。它们安静地待在那里，十年后依然可靠。",
   details: [
-    "台面 | 陶瓷、理化板、环氧树脂，全系 SEFA 8M 认证",
-    "框架 | 1.2mm 冷轧钢板 · 焊后整体热处理 · 静电环氧喷涂",
+    "台面 | 陶瓷、理化板、环氧树脂，全系通过检测认证",
+    "框架 | 1.0–1.2mm 冷轧钢板 · 整体热处理 · 静电环氧粉末喷涂",
     "承重 | 中央台面 ≥ 400kg/m²，仪器台 ≥ 600kg/m²",
     "精度 | 数控冲裁 ±0.1mm · 折弯角度偏差 ≤ 0.5°",
-    "防腐 | 环氧涂层盐雾测试 ≥ 1000h，耐 37% 盐酸 72h 无变化",
+    "防腐 | 盐雾测试 ≥ 200h，耐 37% 盐酸 72h 无变化",
   ],
   cards: ["/images/图1-1.png", "/images/图1-2.png", "/images/图1-3.png"],
 };
@@ -78,8 +81,8 @@ const s2 = {
   title: "通风柜与安全",
   desc: "一个通风柜在工作时，你几乎听不到声音。调节门滑过指尖的力度不轻不重，气流稳定到让你忘了它正在以每秒数百升的速度替换着空气。这份不动声色，是因为每 0.1 秒有一次采样、变频器在实时修正转速、补风系统在操作口前方织着一道看不见的气幕。真正可靠的东西往往就是这样——不响、不亮、不弹通知，但断电那一刻自动切备用回路，风机故障三秒接管。它不发一言，但每个深夜都在说同一句话：我在。",
   details: [
-    "气流 | 面风速 0.3–0.5m/s 自适应 · ASHRAE 110 & EN 14175-3 双标",
-    "控制 | 0.1s 采样 · 红外位移传感器 · VAV 变频调速",
+    "气流 | 面风速 0.3–0.5m/s · ASHRAE 110 & EN 14175-3",
+    "控制 | 红外位移传感器 · VAV 变频调速 · 面风速自适应",
     "补风 | 主动气幕 · 补风角度可调 · 避免操作口紊流",
     "安全 | 双路供电 · 应急排风 3s 接管 · 防坠落钢丝绳",
   ],
@@ -88,7 +91,7 @@ const s2 = {
 const s3 = {
   en: "Infrastructure",
   title: "实验室基础配套",
-  desc: "供气管路、纯水系统、废水处理、洁净空调——看不见的地方，才见真功夫。管路隐藏式走线，气压自动监测，一键紧急切断。每一处都考虑到了极端情况下的安全冗余。这些不是写进合同的条款，是让使用者每天安然走进实验室的理由。",
+  desc: "供气管路、纯水系统、废水处理、洁净空调——看不见的地方，才见真功夫。管路隐藏式走线，气压自动监测，一键紧急切断。每一处都考虑到了极端情况下的安全冗余。每天默默守护着科研工作者。",
   items: [
     { label: "高纯气体管路系统", desc: "N₂、Ar、He 等特种气体从不锈钢管路输送到每一个用气点，自动压力监测，一键紧急切断，泄漏报警联动。" },
     { label: "中央纯水 / 超纯水系统", desc: "自来水经多级处理后达到 18.2 MΩ·cm 超纯水标准，全循环管路设计，无死角，抑制细菌滋生。" },
@@ -102,10 +105,10 @@ const s4 = {
   title: "因需而变",
   desc: "你的实验室，只像你自己。我们不复制，只理解，最好的方案是从你的实验室里找到的。",
   steps: [
-    { title: "需求调研 & 空间规划", desc: "每个项目开始之前，我们做的第一件事不是画图，是去看。看研究员的取试剂高度，看走廊推车几点经过，看上午的阳光从哪扇窗进来。这些不会写进招标文件，但会写进我们的第一根线。先有动线，后有空间——样品怎么进、废弃物怎么出、人从工位到通风柜走几步，动线清楚了，空间自然长出来。" },
+    { title: "前期调研", desc: "每个项目开始之前，我们做的第一件事不是画图，是去看。看研究员的取试剂高度，看走廊推车几点经过，看上午的阳光从哪扇窗进来。这些不会写进招标文件，但会写进我们的第一根线。先有动线，后有空间——样品怎么进、废弃物怎么出、人从工位到通风柜走几步，动线清楚了，空间自然长出来。" },
     { title: "3D 方案设计 & BIM 协同", desc: "Revit 全专业建模，建筑、结构、机电、管路在同一模型里碰撞、妥协、找到最优解。不是画完图再检查——管线打架在设计阶段就解决了。方案确定前提供 3D 效果图与全尺寸样板间，你不需要看懂图纸，你只需要看到未来实验室的样子。" },
     { title: "精密制造 & 品质检验", desc: "自有工厂制造，不外包。数控冲裁精度控制在 ±0.1mm，钢框架焊接后整体退火，让应力一点一点释放干净。每一张台面出厂前逐张通过 SEFA 8M 全套测试，每一台通风柜逐台通过 ASHRAE 110 面风速检测——不是行业里常见的抽检，是每一件都测。" },
-    { title: "现场安装 & 分阶段验收", desc: "自有施工团队进场，项目经理全程驻场，不转包。安装、调试、培训分阶段推进，每一阶段验收签字后才进入下一步。竣工 BIM 模型随交付一起归档——十年后你要改造实验室，打开模型就知道当初每一根管线怎么走的、每一个阀门在什么位置。终身维护，2 小时响应。" },
+    { title: "项目执行", desc: "现场统筹、进度管控、节点验收、数字归档。安装、调试、培训分阶段推进，每一阶段验收后才进入下一步。竣工模型随交付一起归档——十年后要改造实验室，打开模型就知道当初每一根管线怎么走的。终身维护，2 小时响应。" },
   ],
 };
 
@@ -213,21 +216,21 @@ export default function ServicesPage() {
       <section id="infrastructure" className="bg-white py-32 md:py-48">
         <div className="max-w-[1200px] mx-auto px-8 lg:px-16">
           {/* Top — centered heading */}
-          <div className="text-center mb-12 md:mb-20">
+          <div className="mb-12 md:mb-20 text-center">
             <p className="text-[10px] text-[#007AFF]/45 tracking-[0.35em] font-medium mb-6 select-none">{s3.en}</p>
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-[#1D1D1F] tracking-tight leading-tight"
               style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 200 }}>{s3.title}</h2>
             <div className="w-10 h-px bg-black/8 mx-auto mt-6 mb-8" />
-            <p className="text-sm text-black/40 font-light leading-relaxed max-w-xl mx-auto">{s3.desc}</p>
+            <p className="text-sm text-black/40 font-light leading-relaxed max-w-xl mx-auto text-left" style={{ textIndent: "2em" }}>{s3.desc}</p>
           </div>
 
           {/* Full-bleed image — capped height, frosted glass text badge */}
           <div className="w-screen relative left-1/2 -translate-x-1/2 mb-16 overflow-hidden" style={{ maxHeight: "72vh" }}>
             <img src="/images/系统集成.png" alt="" className="w-full h-full object-cover block" draggable={false} style={{ maxHeight: "72vh" }} />
             {/* Frosted glass pill with flowing color, links to contact */}
-            <div className="absolute inset-0 flex items-center justify-center" style={{ paddingTop: "2.5%" }}>
+            <div className="absolute inset-0 flex items-center justify-center" style={{ paddingTop: "4%" }}>
               <a href="/contact" className="relative px-6 py-2 bg-white/5 backdrop-blur-sm rounded-full text-white/50 tracking-[0.15em] overflow-hidden hover:bg-white/10 hover:text-white/70 transition-all duration-500"
-                style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 200, fontSize: "clamp(1.25rem, 3.5vw, 3rem)" }}>
+                style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 200, fontSize: "clamp(0.875rem, 2.5vw, 2rem)" }}>
                 <span className="absolute inset-0 bg-gradient-to-r from-[#007AFF]/12 via-[#6C5CE7]/12 to-[#007AFF]/12 animate-flow rounded-full" />
                 <span className="relative z-10">RAYHO</span>
               </a>
@@ -246,7 +249,7 @@ export default function ServicesPage() {
                       <Icon className="w-[18px] h-[18px] text-[#007AFF]/50" strokeWidth={1.5} />
                     </div>
                     <p className="text-sm text-black/55 font-light mb-1.5 text-center">{item.label}</p>
-                    {item.desc && <p className="text-xs text-black/30 font-light leading-relaxed text-center">{item.desc}</p>}
+                    {item.desc && <p className="text-xs text-black/30 font-light leading-relaxed">{item.desc}</p>}
                   </div>
                 );
               });
@@ -283,8 +286,14 @@ export default function ServicesPage() {
                         <img src={`/images/process-0${idx + 1}.png`} alt="" className="w-full h-full object-cover opacity-90" draggable={false} />
                       </div>
                     </div>
-                    {/* Gap for divider */}
-                    <div className="w-[6%] shrink-0" />
+                    {/* Gap for divider + arrow dot */}
+                    <div className="w-[6%] shrink-0 relative flex items-start justify-center pt-4">
+                      <span className="sticky top-1/2 w-8 h-8 rounded-full bg-white border border-black/[0.08] flex items-center justify-center select-none">
+                        <svg className="w-3.5 h-3.5 text-[#007AFF]/25" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                      </span>
+                    </div>
                     {/* Text side */}
                     <div className="w-[47%] shrink-0 pt-4">
                       <p className={`text-[10px] text-[#007AFF]/35 tracking-[0.25em] font-medium mb-2 ${isLeft ? "" : "text-right"}`}>PHASE</p>
@@ -292,7 +301,7 @@ export default function ServicesPage() {
                         style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 200 }}>{(idx + 1).toString().padStart(2, "0")}</span>
                       <h3 className={`text-xl lg:text-2xl font-light text-[#1D1D1F] mt-3 mb-3 ${isLeft ? "" : "text-right"}`}
                         style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>{step.title}</h3>
-                      <p className={`text-base text-black/45 font-light leading-relaxed ${isLeft ? "" : "text-right"}`} style={{ textIndent: "2em" }}>{step.desc}</p>
+                      <p className="text-base text-black/45 font-light leading-relaxed">{step.desc}</p>
                     </div>
                   </div>
                 );
