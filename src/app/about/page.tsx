@@ -101,7 +101,7 @@ export default function AboutPage() {
               </p>
               <p className="text-[#007AFF]/35 text-[10px] tracking-[0.3em] font-medium mb-8 select-none">JOIN US</p>
               <p className="text-black/55 text-base md:text-lg leading-relaxed"
-                style={{ fontFamily: '"Songti SC", "STSong", "Noto Serif SC", serif' }}>
+                style={{ fontFamily: '"Songti SC", "STSong", "Noto Serif SC", "SimSun", "FangSong", "NSimSun", serif' }}>
                 我们相信好的东西都是安静的。
               </p>
               <p className="text-black/45 text-sm md:text-base font-light mt-6 leading-relaxed"

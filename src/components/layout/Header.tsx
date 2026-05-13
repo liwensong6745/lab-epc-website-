@@ -38,7 +38,7 @@ export default function Header() {
         <div className="max-w-[1440px] mx-auto px-8 lg:px-16">
           <div className="flex items-center justify-between h-20">
             <Link href="/" className="flex items-center gap-3 shrink-0">
-              <span className="text-xl tracking-tight text-black" style={{ fontFamily: '"Songti SC", "STSong", "Noto Serif SC", serif' }}>
+              <span className="text-xl tracking-tight text-black" style={{ fontFamily: '"Songti SC", "STSong", "Noto Serif SC", "SimSun", "FangSong", "NSimSun", serif' }}>
                 瑞辉筑业<span className="inline-block w-1.5 h-1.5 rounded-full bg-[#007AFF] mx-2 align-middle" />RayHo
               </span>
             </Link>
@@ -86,7 +86,7 @@ export default function Header() {
           <div className="absolute inset-0 bg-black/20 backdrop-blur-sm" onClick={() => setMobileOpen(false)} />
           <div className="absolute right-0 top-0 bottom-0 w-72 bg-white shadow-2xl">
             <div className="flex items-center justify-between p-6">
-              <span className="text-black" style={{ fontFamily: '"Songti SC", "STSong", "Noto Serif SC", serif' }}>瑞辉筑业<span className="inline-block w-1.5 h-1.5 rounded-full bg-[#007AFF] mx-2 align-middle" />RayHo</span>
+              <span className="text-black" style={{ fontFamily: '"Songti SC", "STSong", "Noto Serif SC", "SimSun", "FangSong", "NSimSun", serif' }}>瑞辉筑业<span className="inline-block w-1.5 h-1.5 rounded-full bg-[#007AFF] mx-2 align-middle" />RayHo</span>
               <button onClick={() => setMobileOpen(false)} className="p-2 text-black/40 hover:text-black">
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

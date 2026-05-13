@@ -13,7 +13,7 @@
   --color-neon: #007AFF;
   --color-neon-glow: rgba(0, 122, 255, 0.15);
   --color-dark: #1D1D1F;
-  --font-sans: "Inter", "Noto Sans SC", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), var(--font-noto-sans-sc), "PingFang SC", "Microsoft YaHei", ui-sans-serif, system-ui, sans-serif;
   --animate-float: float-card 6s ease-in-out infinite;
   --animate-blob-1: blob-1 10s ease-in-out infinite;
   --animate-blob-2: blob-2 13s ease-in-out infinite;
