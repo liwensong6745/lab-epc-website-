@@ -3,6 +3,7 @@ import { Inter, Noto_Sans_SC } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import ImageProtect from "@/components/layout/ImageProtect";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -36,6 +37,7 @@ export default function RootLayout({
   return (
     <html lang="zh-CN" className={`h-full antialiased ${inter.variable} ${notoSansSC.variable}`}>
       <body className="min-h-full flex flex-col">
+        <ImageProtect />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
