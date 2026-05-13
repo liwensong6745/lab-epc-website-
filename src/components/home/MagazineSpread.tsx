@@ -33,9 +33,9 @@ function DetailList({ details }: { details: string[] }) {
               <IconFor label={label} />
             </span>
             {parts.length === 2 ? (
-              <><span className="text-black/55 font-medium whitespace-nowrap">{parts[0]}</span><span className="text-[#007AFF]/30 mx-1 shrink-0">|</span><span className="text-black/40">{parts[1]}</span></>
+              <><span className="text-black/65 font-medium whitespace-nowrap">{parts[0]}</span><span className="text-[#007AFF]/30 mx-1 shrink-0">|</span><span className="text-black/55">{parts[1]}</span></>
             ) : (
-              <span className="text-black/40">{d}</span>
+              <span className="text-black/55">{d}</span>
             )}
           </li>
         );
@@ -104,7 +104,7 @@ export default function MagazineSpread() {
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-[#1D1D1F] tracking-tight leading-tight mb-8"
                 style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 200 }}>{s1.title}</h2>
               <div className="w-10 h-px bg-black/8 mb-6" />
-              <p className="text-sm text-black/50 font-light leading-relaxed mb-8 max-w-md select-none" style={indentStyle}>{s1.desc}</p>
+              <p className="text-sm text-black/60 font-light leading-relaxed mb-8 max-w-md select-none" style={indentStyle}>{s1.desc}</p>
               <DetailList details={s1.details} />
             </div>
 
@@ -144,7 +144,7 @@ export default function MagazineSpread() {
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-[#1D1D1F] tracking-tight leading-tight mb-8"
                 style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 200 }}>{s2.title}</h2>
               <div className="w-10 h-px bg-black/8 mb-6" />
-              <p className="text-sm text-black/50 font-light leading-relaxed mb-8 max-w-md select-none" style={indentStyle}>{s2.desc}</p>
+              <p className="text-sm text-black/60 font-light leading-relaxed mb-8 max-w-md select-none" style={indentStyle}>{s2.desc}</p>
               <DetailList details={s2.details} />
             </div>
 
@@ -170,7 +170,7 @@ export default function MagazineSpread() {
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-[#1D1D1F] tracking-tight leading-tight mb-8"
                 style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 200 }}>{s3.title}</h2>
               <div className="w-10 h-px bg-black/8 mb-6" />
-              <p className="text-sm text-black/50 font-light leading-relaxed mb-8 max-w-md select-none" style={indentStyle}>{s3.desc}</p>
+              <p className="text-sm text-black/60 font-light leading-relaxed mb-8 max-w-md select-none" style={indentStyle}>{s3.desc}</p>
               <DetailList details={s3.details} />
             </div>
           </div>

@@ -34,9 +34,9 @@ function DetailItem({ d }: { d: string }) {
         <IconFor label={label} />
       </span>
       {parts.length === 2 ? (
-        <><span className="text-black/55 font-medium whitespace-nowrap">{parts[0]}</span><span className="text-[#007AFF]/30 mx-1 shrink-0">|</span><span className="text-black/40">{parts[1]}</span></>
+        <><span className="text-black/65 font-medium whitespace-nowrap">{parts[0]}</span><span className="text-[#007AFF]/30 mx-1 shrink-0">|</span><span className="text-black/55">{parts[1]}</span></>
       ) : (
-        <span className="text-black/40">{d}</span>
+        <span className="text-black/55">{d}</span>
       )}
     </li>
   );

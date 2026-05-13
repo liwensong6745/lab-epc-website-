@@ -16,7 +16,7 @@ export default function ContactPage() {
             style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>
             告诉我们<span className="font-bold">需求</span>，<br />剩下的交给<span className="font-bold">我们</span>
           </h1>
-          <p className="text-black/30 text-sm font-light mt-6 max-w-lg leading-relaxed">
+          <p className="text-black/50 text-sm font-light mt-6 max-w-lg leading-relaxed">
             专家团队将提供一对一的专业咨询
           </p>
         </div>
@@ -28,7 +28,7 @@ export default function ContactPage() {
           {/* Contact Info */}
           <div className="mb-14">
             <div className="w-8 h-px bg-black/[0.12] mb-6" />
-            <p className="text-black/50 text-2xl md:text-3xl font-light tracking-tight mb-3"
+            <p className="text-black/65 text-2xl md:text-3xl font-light tracking-tight mb-3"
               style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>
               联系我们
             </p>
@@ -41,8 +41,8 @@ export default function ContactPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3" />
                   </svg>
                 </div>
-                <span className="text-black/40">周一至周五 9:00 – 18:00</span>
-                <span className="text-black/25">· 周六 10:00 – 16:00</span>
+                <span className="text-black/55">周一至周五 9:00 – 18:00</span>
+                <span className="text-black/40">· 周六 10:00 – 16:00</span>
               </div>
               <div className="flex gap-3 items-center">
                 <div className="w-8 h-8 rounded-full bg-[#1D1D1F] flex items-center justify-center shrink-0 text-white/70">
@@ -50,7 +50,7 @@ export default function ContactPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 </div>
-                <span className="text-black/40 select-text">15711406648</span>
+                <span className="text-black/55 select-text">15711406648</span>
               </div>
               <div className="flex gap-3 items-center">
                 <div className="w-8 h-8 rounded-full bg-[#1D1D1F] flex items-center justify-center shrink-0 text-white/70">
@@ -58,7 +58,7 @@ export default function ContactPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <span className="text-black/40 select-text">ruihuizhuye@126.com</span>
+                <span className="text-black/55 select-text">ruihuizhuye@126.com</span>
               </div>
               <div className="flex gap-3 items-center">
                 <div className="w-8 h-8 rounded-full bg-[#1D1D1F] flex items-center justify-center shrink-0 text-white/70">
@@ -67,13 +67,13 @@ export default function ContactPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
-                <span className="text-black/40 select-text">北京市昌平区国家信息产业基地13号1046</span>
+                <span className="text-black/55 select-text">北京市昌平区国家信息产业基地13号1046</span>
               </div>
             </div>
           </div>
 
           <div className="w-16 h-px bg-black/[0.08] mb-10" />
-          <p className="text-black/50 text-2xl md:text-3xl font-light tracking-tight mb-3"
+          <p className="text-black/65 text-2xl md:text-3xl font-light tracking-tight mb-3"
             style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>
             留言
           </p>
@@ -87,7 +87,7 @@ export default function ContactPage() {
                 </svg>
               </div>
               <h3 className="text-lg font-bold text-[#1D1D1F] mb-3">消息已送达</h3>
-              <p className="text-black/25 text-sm font-light mb-8">我们将在1个工作日内与您联系</p>
+              <p className="text-black/40 text-sm font-light mb-8">我们将在1个工作日内与您联系</p>
               <button
                 onClick={() => setSubmitted(false)}
                 className="inline-flex items-center gap-3 px-10 py-3.5 bg-[#1D1D1F] text-white text-sm tracking-[0.1em] font-medium rounded-full hover:bg-[#007AFF] transition-all duration-500"
