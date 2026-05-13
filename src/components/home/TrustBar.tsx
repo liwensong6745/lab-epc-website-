@@ -42,11 +42,12 @@ export default function TrustBar() {
       {/* Single line — like a movie subtitle */}
       <div className="relative z-10 h-full flex items-end pb-12 md:pb-20 justify-center px-6 md:px-8">
         <div className="text-center">
-          <p className="text-white/40 text-[11px] md:text-base font-light tracking-[0.06em] md:tracking-[0.2em] select-none max-w-[240px] md:max-w-none mx-auto leading-snug md:leading-relaxed"
-            style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>
+          <p className="text-white/40 font-light select-none mx-auto leading-snug"
+            style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300, fontSize: "clamp(10px, 1.8vw, 16px)", letterSpacing: "clamp(0.04em, 0.15vw, 0.2em)" }}>
             The best laboratory is the one you never have to think about.
           </p>
-          <p className="text-white/40 text-[10px] md:text-sm font-light tracking-[0.06em] md:tracking-[0.15em] mt-2 md:mt-3 select-none">
+          <p className="text-white/40 font-light select-none mt-2 md:mt-3"
+            style={{ fontSize: "clamp(9px, 1.4vw, 14px)", letterSpacing: "clamp(0.04em, 0.12vw, 0.15em)" }}>
             最好的实验室，是你从未察觉的存在
           </p>
         </div>
