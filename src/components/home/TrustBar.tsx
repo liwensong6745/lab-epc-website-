@@ -41,7 +41,7 @@ export default function TrustBar() {
 
       {/* Single line — like a movie subtitle */}
       <div className="relative z-10 h-full flex items-end pb-12 md:pb-20 justify-center px-6 md:px-8">
-        <div className="text-center">
+        <div className="text-center" style={{ maxWidth: "clamp(200px, 45vw, none)" }}>
           <p className="text-white/40 font-light select-none mx-auto leading-snug"
             style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300, fontSize: "clamp(10px, 1.8vw, 16px)", letterSpacing: "clamp(0.04em, 0.15vw, 0.2em)" }}>
             The best laboratory is the one you never have to think about.
