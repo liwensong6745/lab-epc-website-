@@ -12,17 +12,15 @@ export default function AboutPage() {
       <section className="relative bg-white overflow-hidden" style={{ height: "100vh" }}>
         <img src="/images/关于hero.png" alt="瑞辉筑业实验室项目展示" className="absolute inset-0 w-full h-full object-cover" style={{ transform: "scaleX(-1)", filter: "saturate(0.85) hue-rotate(-8deg)" }} draggable={false} />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/[0.02]" />
-        <div className="relative z-10 h-full flex items-end pb-16 md:pb-24">
-          <div className="max-w-[1440px] mx-auto px-8 lg:px-16 w-full">
-            <p className="text-white/60 text-[9px] tracking-[0.3em] font-medium mb-8 select-none">FOCUSED</p>
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-light text-white tracking-tight leading-tight max-w-3xl drop-shadow-[0_2px_12px_rgba(0,0,0,0.3)]"
-              style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>
-              把<span className="font-bold">热情</span>，<br />写进每一个<span className="font-bold">实验室</span>
-            </h1>
-            <p className="text-white/50 text-sm font-light mt-6 leading-relaxed drop-shadow-[0_1px_6px_rgba(0,0,0,0.3)]">
-              热爱这件事，已经很久了
-            </p>
-          </div>
+        <div className="absolute inset-0 z-10 flex flex-col justify-end pb-16 md:pb-24 px-8 lg:px-16">
+          <p className="text-white/60 text-[9px] tracking-[0.3em] font-medium mb-8 select-none">FOCUSED</p>
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-light text-white tracking-tight leading-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.3)]"
+            style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>
+            把<span className="font-bold">热情</span>，<br />写进每一个<span className="font-bold">实验室</span>
+          </h1>
+          <p className="text-white/50 text-sm font-light mt-6 leading-relaxed drop-shadow-[0_1px_6px_rgba(0,0,0,0.3)]">
+            热爱这件事，已经很久了
+          </p>
         </div>
       </section>
 

@@ -122,10 +122,9 @@ export default function ServicesPage() {
       {/* ═══════ Hero — Full-bleed ═══════ */}
       <section className="relative bg-white overflow-hidden" style={{ height: "100vh" }}>
         <img src="/images/hero.png" alt="" className="absolute inset-0 w-full h-full object-cover" draggable={false} />
-        <div className="relative z-10 h-full flex items-end pb-16 md:pb-24">
-          <div className="max-w-[1440px] mx-auto px-8 lg:px-16 w-full">
+        <div className="absolute inset-0 z-10 flex flex-col justify-end pb-16 md:pb-24 px-8 lg:px-16">
             <p className="text-white/60 text-[9px] tracking-[0.3em] font-medium mb-8 select-none">DURABLE BY DESIGN</p>
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-light text-white tracking-tight leading-tight max-w-3xl drop-shadow-[0_2px_12px_rgba(0,0,0,0.3)]"
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-light text-white tracking-tight leading-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.3)]"
               style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>
               每一个<span className="font-bold">细节</span>，<br />都经得起<span className="font-bold">审视</span>
             </h1>
@@ -134,7 +133,6 @@ export default function ServicesPage() {
             </p>
             <div className="w-40 h-[0.5px] bg-white/20 mt-12" />
           </div>
-        </div>
       </section>
 
       {/* ═══════ Spread 1 — Furniture ═══════ */}
