@@ -40,13 +40,13 @@ export default function TrustBar() {
       <div className="absolute inset-0 bg-black/45" />
 
       {/* Single line — like a movie subtitle */}
-      <div className="relative z-10 h-full flex items-end pb-8 md:pb-20 justify-center px-6 md:px-8">
-        <div className="text-center md:max-w-none">
-          <p className="text-white/35 md:text-white/40 text-[10px] md:text-base font-light tracking-[0.02em] md:tracking-[0.2em] select-none leading-[1.2] md:leading-relaxed"
+      <div className="relative z-10 h-full flex items-end pb-16 md:pb-20 justify-center px-8">
+        <div className="text-center">
+          <p className="text-white/40 text-sm md:text-base font-light tracking-[0.2em] select-none"
             style={{ fontFamily: '"Inter", "Noto Sans SC", sans-serif', fontWeight: 300 }}>
             The best laboratory is the one you never have to think about.
           </p>
-          <p className="text-white/35 md:text-white/40 text-[9px] md:text-sm font-light tracking-[0.02em] md:tracking-[0.15em] mt-1.5 md:mt-3 select-none">
+          <p className="text-white/40 text-xs md:text-sm font-light tracking-[0.15em] mt-3 select-none">
             最好的实验室，是你从未察觉的存在
           </p>
         </div>
